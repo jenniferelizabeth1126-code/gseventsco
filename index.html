@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Standard Events Consulting | Strategic Event Advisory | Jennifer Jones</title>
+  <meta name="description" content="Gold Standard Events Consulting is an independent strategic advisory firm for events, hospitality, and revenue growth. Jennifer Jones helps organizations make better event decisions before execution begins." />
+  <meta name="keywords" content="event strategy consulting, hospitality consulting, venue consulting, corporate events, strategic advisor, Jennifer Jones, Gold Standard Events Consulting, gseventsco.com" />
+  <meta property="og:title" content="Gold Standard Events Consulting | Independent Strategic Advisory" />
+  <meta property="og:description" content="Make Better Decisions Before You Spend a Dollar on Execution. Independent strategic advisory for events, hospitality, and revenue growth." />
+  <meta property="og:url" content="https://gseventsco.com" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/images/logo-1.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── NEW REBRAND STYLES ───────────────────────────── */
+
+    /* Dark sections */
+    .bg-charcoal { background: var(--navy); }
+    .bg-charcoal-2 { background: var(--navy); }
+    .bg-cream { background: var(--cream); }
+    .bg-white { background: #FFFFFF; }
+    .bg-sand { background: var(--sand); }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    .hero-v2 {
+      background: var(--cream);
+      padding: calc(var(--nav-h) + 6rem) 0 7rem;
+      min-height: 110vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-v2__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s6);
+      align-items: center;
+    }
+    .hero-v2__eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--s3);
+    }
+    .hero-v2__tagline {
+      font-family: var(--sans);
+      font-size: var(--base);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--text-mid);
+      margin-bottom: var(--s3);
+      font-style: italic;
+    }
+    .hero-v2 h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--navy);
+      margin-bottom: var(--s4);
+    }
+    .hero-v2__sub {
+      font-family: var(--sans);
+      font-size: var(--base);
+      line-height: 1.95;
+      color: var(--text-mid);
+      margin-bottom: var(--s4);
+      max-width: 520px;
+    }
+    .hero-v2__before {
+      margin: var(--s4) 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .hero-v2__before-line {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      font-style: italic;
+      color: var(--text-light);
+      letter-spacing: 0.02em;
+    }
+    .hero-v2__before-line--last {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .hero-v2__cta-line {
+      font-family: var(--sans);
+      font-size: var(--base);
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: var(--s4);
+      letter-spacing: 0.02em;
+    }
+    .hero-v2__actions { display: flex; gap: var(--s2); flex-wrap: wrap; }
+    .btn--hero-gold {
+      background: var(--gold);
+      color: #FFFFFF;
+      border: 1px solid var(--gold);
+      display: inline-flex; align-items: center;
+      font-family: var(--sans); font-size: 12px; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 1rem 2.4rem; cursor: pointer;
+      transition: all var(--mid);
+    }
+    .btn--hero-gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+    .btn--hero-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid var(--navy);
+      display: inline-flex; align-items: center;
+      font-family: var(--sans); font-size: 12px; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 1rem 2.4rem; cursor: pointer;
+      transition: all var(--mid);
+    }
+    .btn--hero-outline:hover { background: var(--navy); color: #fff; }
+
+    /* Hero right — headshot photo */
+    .hero-v2__right {
+      padding-left: var(--s5);
+      border-left: 2px solid var(--gold-pale);
+    }
+    .hero-v2__photo-wrap {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+    }
+    .hero-v2__photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ── WHY US ───────────────────────────────────────── */
+    .why-us {
+      background: #FFFFFF;
+      padding: var(--s8) 0;
+    }
+    .why-us__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: var(--s7);
+      align-items: start;
+    }
+    .why-us__left h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.1;
+      margin-bottom: var(--s3);
+    }
+    .why-us__left .rule { margin: var(--s3) 0; }
+    .why-us__right p {
+      font-size: var(--base);
+      line-height: 1.95;
+      color: var(--text-mid);
+      margin-bottom: var(--s3);
+    }
+    .why-us__right p:last-child { margin-bottom: 0; }
+    .why-us__highlight {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.5;
+      border-left: 3px solid var(--gold);
+      padding-left: var(--s3);
+      margin: var(--s4) 0;
+      font-style: italic;
+    }
+
+    /* ── RESULTS STRIP ───────────────────────────────── */
+    .results-strip {
+      background: var(--navy);
+      padding: var(--s6) 0;
+    }
+    .results-strip__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+    }
+    .results-strip__item {
+      text-align: center;
+      padding: var(--s4) var(--s2);
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .results-strip__item:last-child { border-right: none; }
+    .results-strip__num {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.4rem;
+      line-height: 1;
+    }
+    .results-strip__label {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── ABOUT ───────────────────────────────────────── */
+    .about-v2 {
+      background: var(--cream);
+      padding: var(--s8) 0;
+    }
+    .about-v2__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+    }
+    .about-v2__header {
+      max-width: 860px;
+      margin-bottom: var(--s6);
+    }
+    .about-v2__header h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.08;
+      margin-bottom: var(--s3);
+    }
+    .about-v2__grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: var(--s6);
+      align-items: start;
+    }
+    .about-v2__photo img {
+      width: 100%;
+      min-height: 520px;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .about-v2__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s4);
+    }
+    .about-v2__bio p {
+      font-size: var(--base);
+      line-height: 1.95;
+      color: var(--text-mid);
+      margin-bottom: var(--s3);
+    }
+    .about-v2__bio-line {
+      font-size: var(--base);
+      line-height: 2;
+      color: var(--text-mid);
+      padding-left: var(--s3);
+      border-left: 2px solid var(--gold-pale);
+      margin: var(--s2) 0;
+    }
+    .about-v2__not {
+      background: var(--navy);
+      padding: var(--s5);
+    }
+    .about-v2__not h4 {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--s3);
+    }
+    .about-v2__not-item {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.8vw, 1.3rem);
+      font-style: italic;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      padding: var(--s2) 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .about-v2__not-item:last-of-type { border-bottom: none; }
+    .about-v2__closer {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-style: italic;
+      color: #FFFFFF;
+      margin-top: var(--s3);
+      line-height: 1.5;
+    }
+    .about-v2__resume-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: var(--s4);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid var(--gold-pale);
+      padding-bottom: 3px;
+      transition: color var(--fast), border-color var(--fast);
+    }
+    .about-v2__resume-link:hover { color: var(--gold-dark); border-color: var(--gold-dark); }
+
+    /* ── PHILOSOPHY ──────────────────────────────────── */
+    .philosophy {
+      background: var(--cream);
+      padding: var(--s8) 0;
+    }
+    .philosophy__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: var(--s7);
+      align-items: center;
+    }
+    .philosophy__left h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.15;
+      margin-bottom: var(--s2);
+    }
+    .philosophy__left h2 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+    .philosophy__left .rule { background: var(--gold); margin: var(--s3) 0; opacity: 0.5; }
+    .philosophy__sub {
+      font-family: var(--sans);
+      font-size: var(--sm);
+      color: var(--text-light);
+      letter-spacing: 0.06em;
+      font-style: italic;
+    }
+    .philosophy__right p {
+      font-size: var(--base);
+      line-height: 1.95;
+      color: var(--text-mid);
+      margin-bottom: var(--s3);
+    }
+    .philosophy__right p:last-child { margin-bottom: 0; }
+    .philosophy__highlight {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+      font-style: italic;
+      color: #111111 !important;
+      border-left: 3px solid var(--gold);
+      padding-left: var(--s3);
+      margin: var(--s4) 0 !important;
+      line-height: 1.5;
+    }
+
+    /* ── SERVICES ────────────────────────────────────── */
+    .services-v2 {
+      background: #FFFFFF;
+      padding: var(--s8) 0;
+    }
+    .services-v2__header {
+      max-width: var(--max);
+      margin: 0 auto var(--s6);
+      padding: 0 var(--s4);
+    }
+    .services-v2__header h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 400;
+      color: #111111;
+      margin-bottom: var(--s2);
+    }
+    .services-v2__header p {
+      font-size: var(--base);
+      color: var(--text-mid);
+      max-width: 540px;
+    }
+    .services-v2__grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s3);
+    }
+    .svc-card {
+      background: var(--cream);
+      padding: var(--s5);
+      border-top: 3px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+    }
+    .svc-card__num {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 300;
+      color: var(--gold-pale);
+      line-height: 1;
+      margin-bottom: var(--s2);
+    }
+    .svc-card__title {
+      font-family: var(--serif);
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.2;
+      margin-bottom: var(--s2);
+    }
+    .svc-card__desc {
+      font-size: var(--base);
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: var(--s3);
+    }
+    .svc-card__label {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--s2);
+      margin-top: var(--s3);
+    }
+    .svc-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--s3);
+    }
+    .svc-card__list li {
+      font-size: var(--base);
+      color: var(--text-mid);
+      line-height: 1.75;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .svc-card__list li::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .svc-card__list li:last-child { border-bottom: none; }
+    .svc-card__ideal {
+      background: var(--navy);
+      padding: var(--s3);
+      margin-top: auto;
+    }
+    .svc-card__ideal-label {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .svc-card__ideal p {
+      font-size: var(--sm);
+      line-height: 1.75;
+      color: rgba(255,255,255,0.65);
+      margin: 0;
+    }
+
+    /* ── WHY JENNIFER ────────────────────────────────── */
+    .why-jennifer {
+      background: var(--cream);
+      padding: var(--s8) 0;
+    }
+    .why-jennifer__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: var(--s7);
+      align-items: start;
+    }
+    .why-jennifer__left h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.1;
+      margin-bottom: var(--s3);
+    }
+    .why-jennifer__right p {
+      font-size: var(--base);
+      line-height: 1.95;
+      color: var(--text-mid);
+      margin-bottom: var(--s3);
+    }
+    .why-jennifer__understands {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: var(--s3) 0;
+    }
+    .why-jennifer__u-item {
+      font-size: var(--base);
+      color: var(--text-mid);
+      line-height: 1;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+    }
+    .why-jennifer__u-item::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .why-jennifer__closer {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-style: italic;
+      color: #111111;
+      line-height: 1.5;
+      margin-top: var(--s3);
+    }
+
+    /* ── WHO WE SERVE ────────────────────────────────── */
+    .who-we-serve {
+      background: #FFFFFF;
+      padding: var(--s7) 0;
+    }
+    .who-we-serve__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+    }
+    .who-we-serve__inner h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 400;
+      color: #111111;
+      margin-bottom: var(--s5);
+    }
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--s2);
+    }
+    .who-item {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: var(--s3) var(--s3);
+      font-family: var(--sans);
+      font-size: var(--base);
+      color: var(--text-mid);
+      letter-spacing: 0.04em;
+      transition: all var(--mid);
+    }
+    .who-item:hover {
+      background: rgba(192,154,62,0.08);
+      border-color: var(--gold-pale);
+      color: var(--text-dark);
+    }
+
+    /* ── SELECTED ENGAGEMENTS ────────────────────────── */
+    .engagements {
+      background: #FFFFFF;
+      padding: var(--s8) 0;
+    }
+    .engagements__header {
+      max-width: var(--max);
+      margin: 0 auto var(--s5);
+      padding: 0 var(--s4);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: var(--s4);
+    }
+    .engagements__header h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.08;
+    }
+    .engagements__header p {
+      max-width: 380px;
+      font-size: var(--sm);
+      color: var(--text-light);
+      text-align: right;
+      line-height: 1.7;
+    }
+    .engagements__grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--s2);
+    }
+    .eng-card {
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+    .eng-card__img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s ease;
+    }
+    .eng-card:hover .eng-card__img { transform: scale(1.04); }
+    .eng-card__caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0) 100%);
+      padding: var(--s4) var(--s3) var(--s3);
+      transform: translateY(60%);
+      transition: transform 0.45s ease;
+    }
+    .eng-card:hover .eng-card__caption { transform: translateY(0); }
+    .eng-card__title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .eng-card__desc {
+      font-family: var(--sans);
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+      margin: 0;
+    }
+    /* Wide card spans 2 columns */
+    .eng-card--wide { grid-column: span 2; }
+    .eng-card--wide .eng-card__img { aspect-ratio: 16/9; }
+
+    /* ── ENGAGEMENT GROUPS ───────────────────────── */
+    .engagements__group {
+      margin-top: var(--s7);
+    }
+    .engagements__group:first-child {
+      margin-top: 0;
+    }
+    .engagements__group-hd {
+      max-width: var(--max);
+      margin: 0 auto var(--s4);
+      padding: 0 var(--s4);
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+    }
+    .engagements__group-label {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .engagements__group-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--gold-pale);
+    }
+
+    /* ── DIFFERENCE ──────────────────────────────────── */
+    .difference {
+      background: var(--cream);
+      padding: var(--s8) 0;
+    }
+    .difference__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: var(--s7);
+      align-items: start;
+    }
+    .difference__left h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.1;
+      margin-bottom: var(--s3);
+    }
+    .difference__left p {
+      font-size: var(--base);
+      line-height: 1.9;
+      color: var(--text-mid);
+      margin-bottom: var(--s3);
+    }
+    .difference__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .difference__item {
+      font-family: var(--sans);
+      font-size: var(--base);
+      color: var(--text-mid);
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+    }
+    .difference__item::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .difference__closer {
+      font-family: var(--serif);
+      font-size: var(--base);
+      font-style: italic;
+      color: var(--text-mid);
+      margin-top: var(--s3);
+      line-height: 1.7;
+    }
+
+    /* ── FINAL CTA ───────────────────────────────────── */
+    .final-cta {
+      background: var(--navy);
+      padding: var(--s8) 0;
+      text-align: center;
+    }
+    .final-cta__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 var(--s4);
+    }
+    .final-cta__eyebrow {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--s3);
+    }
+    .final-cta h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: var(--s3);
+    }
+    .final-cta p {
+      font-size: var(--base);
+      line-height: 1.95;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: var(--s3);
+    }
+    .final-cta__bold {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-style: italic;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: var(--s4) !important;
+    }
+    .final-cta__btn-group { display: flex; gap: var(--s2); justify-content: center; flex-wrap: wrap; margin-top: var(--s4); }
+
+    /* ── CONTACT SECTION ─────────────────────────────── */
+    .contact-v2 {
+      background: var(--cream);
+      padding: var(--s8) 0;
+    }
+    .contact-v2__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: var(--s7);
+      align-items: start;
+    }
+    .contact-v2__info h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      color: #111111;
+      margin-bottom: var(--s3);
+    }
+    .contact-v2__info p {
+      font-size: var(--base);
+      line-height: 1.9;
+      color: var(--text-mid);
+      margin-bottom: var(--s3);
+    }
+    .contact-v2__detail {
+      margin-top: var(--s4);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+    }
+    .contact-v2__detail a {
+      font-family: var(--sans);
+      font-size: var(--sm);
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      transition: color var(--fast);
+    }
+    .contact-v2__detail a:hover { color: var(--gold-dark); }
+    .contact-v2__form { display: flex; flex-direction: column; gap: var(--s2); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2); }
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-group label {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      padding: 0.85rem 1rem;
+      font-family: var(--sans);
+      font-size: var(--sm);
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color var(--fast);
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    /* ── MOBILE ──────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-v2__inner { grid-template-columns: 1fr; }
+      .hero-v2__right { border-left: none; padding-left: 0; border-top: 2px solid var(--gold-pale); padding-top: var(--s4); }
+      .results-strip__inner { grid-template-columns: repeat(3, 1fr); }
+      .results-strip__item:nth-child(3) { border-right: none; }
+      .results-strip__item:nth-child(4) { border-right: 1px solid rgba(255,255,255,0.08); }
+      .results-strip__item:nth-child(5) { border-right: none; }
+      .services-v2__grid { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: repeat(2, 1fr); }
+      .engagements__grid { grid-template-columns: repeat(2, 1fr); }
+      .eng-card--wide { grid-column: span 2; }
+    }
+    @media (max-width: 768px) {
+      .why-us__inner,
+      .about-v2__grid,
+      .about-v2__content,
+      .philosophy__inner,
+      .why-jennifer__inner,
+      .difference__inner,
+      .contact-v2__inner { grid-template-columns: 1fr; gap: var(--s4); }
+      .about-v2__photo { max-width: 280px; }
+      .about-v2__content { gap: var(--s4); }
+      .engagements__header { flex-direction: column; align-items: flex-start; }
+      .engagements__header p { text-align: left; }
+      .engagements__grid { grid-template-columns: 1fr 1fr; }
+      .eng-card--wide { grid-column: span 2; }
+      .form-row { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .engagements__grid { grid-template-columns: 1fr; }
+      .eng-card--wide { grid-column: span 1; }
+      .eng-card__caption { transform: translateY(0); }
+      .results-strip__inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── TESTIMONIALS ────────────────────────────── */
+    .testimonials {
+      background: var(--navy);
+      padding: var(--s8) 0;
+    }
+    .testimonials__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--s4);
+    }
+    .testimonials__header {
+      text-align: center;
+      margin-bottom: var(--s6);
+    }
+    .testimonials__header .eyebrow { color: var(--gold); }
+    .testimonials__header h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: var(--s2);
+    }
+    .testimonials__header .rule { background: var(--gold); margin: var(--s3) auto; }
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s4);
+    }
+    .testi-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: var(--s5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s3);
+    }
+    .testi-card__mark {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--gold);
+      line-height: 0.8;
+      opacity: 0.7;
+    }
+    .testi-card__text {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-style: italic;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.75;
+      flex: 1;
+    }
+    .testi-card__attr {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: var(--s2);
+    }
+    .testi-card__name {
+      display: block;
+      font-family: var(--sans);
+      font-size: var(--sm);
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+    .testi-card__role {
+      font-family: var(--sans);
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 900px) {
+      .testimonials__grid { grid-template-columns: 1fr; gap: var(--s3); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════ -->
+<nav class="nav nav--scrolled" id="main-nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">
+      <img src="assets/images/logo-gs-final.png" alt="Gold Standard Events Consulting" id="nav-logo" />
+    </a>
+    <div class="nav__links">
+      <a href="#about"       class="nav__link">About</a>
+      <a href="#services"    class="nav__link">Services</a>
+      <a href="#engagements" class="nav__link">Selected Engagements</a>
+      <a href="faq.html"     class="nav__link">FAQ</a>
+      <a href="#contact"     class="nav__link">Contact</a>
+    </div>
+    <a href="#contact" class="nav__cta">Schedule a Strategy Call</a>
+    <button class="nav__toggle" aria-label="Open menu" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay__close" id="menu-close">✕</button>
+  <a href="#about"       class="nav-overlay__link">About</a>
+  <a href="#services"    class="nav-overlay__link">Services</a>
+  <a href="#engagements" class="nav-overlay__link">Selected Engagements</a>
+  <a href="faq.html"     class="nav-overlay__link">FAQ</a>
+  <a href="#contact"     class="nav-overlay__link">Contact</a>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero-v2" id="home">
+  <div class="hero-v2__inner">
+
+    <div class="hero-v2__left">
+      <span class="hero-v2__eyebrow">Gold Standard Events Consulting</span>
+      <p class="hero-v2__tagline">Independent Strategic Advisory for Events, Hospitality, and Revenue Growth</p>
+      <h1>Make Better Decisions Before You Spend a Dollar on Execution.</h1>
+      <p class="hero-v2__sub">Gold Standard Events Consulting helps corporations, hospitality organizations, venues, and leadership teams create smarter event strategies, stronger guest experiences, and more profitable event programs.</p>
+      <div class="hero-v2__before">
+        <span class="hero-v2__before-line">Before the venue is selected.</span>
+        <span class="hero-v2__before-line">Before the vendors are hired.</span>
+        <span class="hero-v2__before-line hero-v2__before-line--last">Before the budget is spent.</span>
+      </div>
+      <p class="hero-v2__cta-line">We help you get the strategy right first.</p>
+      <div class="hero-v2__actions">
+        <a href="#contact" class="btn--hero-gold">Schedule a Strategy Call</a>
+        <a href="#services" class="btn--hero-outline">Explore Services</a>
+      </div>
+    </div>
+
+    <div class="hero-v2__right fade-in">
+      <div class="hero-v2__photo-wrap">
+        <img src="assets/images/photo-portfolio-venue-opening.png" alt="Elegant formal dinner event" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     WHY ORGANIZATIONS HIRE US
+══════════════════════════════════════════════ -->
+<section class="why-us" id="why-us">
+  <div class="why-us__inner">
+
+    <div class="why-us__left fade-in">
+      <span class="eyebrow">Why Organizations Hire Us</span>
+      <h2>Most companies already have a meeting planner.</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="why-us__right fade-up">
+      <p>Most companies already have a meeting planner. Many have an HR team. Some have an agency or destination management company.</p>
+      <p class="why-us__highlight">What they often lack is an experienced strategic advisor who can help leadership make confident decisions before execution begins.</p>
+      <p>That is where Gold Standard Events Consulting comes in.</p>
+      <p>We serve as an independent advisor helping organizations align business goals, event strategy, guest experience, venue selection, budget priorities, and revenue opportunities before planning begins.</p>
+      <p>The result is better decisions, stronger outcomes, and fewer costly mistakes.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     RESULTS STRIP
+══════════════════════════════════════════════ -->
+<div class="results-strip">
+  <div class="results-strip__inner">
+    <div class="results-strip__item fade-up">
+      <span class="results-strip__num">28+</span>
+      <span class="results-strip__label">Years of Industry Experience</span>
+    </div>
+    <div class="results-strip__item fade-up delay-1">
+      <span class="results-strip__num">$10M+</span>
+      <span class="results-strip__label">Revenue Generated</span>
+    </div>
+    <div class="results-strip__item fade-up delay-2">
+      <span class="results-strip__num">Three</span>
+      <span class="results-strip__label">Major Markets Served</span>
+    </div>
+    <div class="results-strip__item fade-up delay-3">
+      <span class="results-strip__num">Fortune 500</span>
+      <span class="results-strip__label">Corporate Experience</span>
+    </div>
+    <div class="results-strip__item fade-up">
+      <span class="results-strip__num">Hundreds</span>
+      <span class="results-strip__label">Of Events, Meetings, and Hospitality Programs Supported</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════ -->
+<section class="about-v2" id="about">
+  <div class="about-v2__inner">
+
+    <div class="about-v2__header fade-in">
+      <span class="eyebrow">About Jennifer Jones</span>
+      <h2>Twenty-Eight Years. Three Markets. One Unwavering Standard.</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="about-v2__grid">
+
+      <!-- Headshot -->
+      <div class="about-v2__photo fade-in">
+        <img src="assets/images/headshot-main.PNG" alt="Jennifer Jones, Event Strategy Consultant" />
+      </div>
+
+      <!-- Bio + Not Box stacked -->
+      <div class="about-v2__content">
+
+        <div class="about-v2__bio fade-up">
+          <p>Jennifer Jones is an Event Strategy Consultant, Hospitality Advisor, and Revenue Growth Strategist with nearly three decades of experience spanning corporate events, hospitality sales, venue operations, business development, and organizational growth.</p>
+          <p>Her experience is unique because she has worked from every side of the table.</p>
+
+          <div class="about-v2__bio-line">She has advised executives.</div>
+          <div class="about-v2__bio-line">Supported corporate meeting planners.</div>
+          <div class="about-v2__bio-line">Built event departments from the ground up.</div>
+          <div class="about-v2__bio-line">Generated millions in event revenue.</div>
+          <div class="about-v2__bio-line">Consulted restaurants and hospitality businesses.</div>
+          <div class="about-v2__bio-line">Trained teams and developed systems that continue producing results long after implementation.</div>
+
+          <p style="margin-top: var(--s3);">Today, Jennifer works as an independent strategic advisor for organizations that need clarity, insight, and experienced guidance before committing significant time, money, and resources.</p>
+
+          <a href="assets/jennifer-jones-resume.pdf" download class="about-v2__resume-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Full Resume
+          </a>
+        </div>
+
+        <div class="about-v2__not fade-up delay-2">
+          <h4>Jennifer Is Not</h4>
+          <div class="about-v2__not-item">She is not an event coordinator.</div>
+          <div class="about-v2__not-item">She is not a traditional planner.</div>
+          <div class="about-v2__not-item">She is not a commission driven vendor.</div>
+          <p class="about-v2__closer">She is the strategic partner organizations call when the stakes are high and the decisions matter.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     PHILOSOPHY
+══════════════════════════════════════════════ -->
+<section class="philosophy">
+  <div class="philosophy__inner">
+
+    <div class="philosophy__left fade-in">
+      <h2>We Do Not Sell Vendors.<br />We Do Not Sell Markups.<br /><em>We Sell Perspective.</em></h2>
+      <div class="rule"></div>
+      <p class="philosophy__sub">Personal Philosophy</p>
+    </div>
+
+    <div class="philosophy__right fade-up">
+      <p>Unlike traditional destination management companies, Gold Standard Events Consulting operates independently.</p>
+      <p class="philosophy__highlight">Our recommendations are based on what is best for the client, not what generates commissions or vendor incentives.</p>
+      <p>Every recommendation is made through the lens of business impact, guest experience, operational excellence, and long-term success.</p>
+      <p>That independence allows us to provide objective guidance clients can trust.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════ -->
+<section class="services-v2" id="services">
+  <div class="services-v2__header fade-in">
+    <span class="eyebrow">What We Do</span>
+    <h2>Three Areas of Strategic Expertise</h2>
+    <p>Every organization faces different challenges. Our work typically falls into three primary areas.</p>
+  </div>
+
+  <div class="services-v2__grid">
+
+    <!-- Service 1 -->
+    <div class="svc-card fade-up">
+      <div class="svc-card__num">01</div>
+      <h3 class="svc-card__title">Event Strategy Advisory</h3>
+      <p class="svc-card__desc">For corporations, executive teams, HR leaders, executive assistants, and meeting professionals who want experienced strategic guidance before planning begins.</p>
+      <div class="svc-card__label">Services Include</div>
+      <ul class="svc-card__list">
+        <li>Executive Retreat Strategy</li>
+        <li>Leadership Offsite Design</li>
+        <li>Conference Strategy</li>
+        <li>Incentive Program Development</li>
+        <li>Guest Experience Design</li>
+        <li>Venue Selection Guidance</li>
+        <li>Budget Alignment</li>
+        <li>Event Concept Development</li>
+        <li>Program Evaluation</li>
+        <li>Vendor Strategy</li>
+        <li>Independent DMC Advisory</li>
+      </ul>
+      <div class="svc-card__ideal">
+        <div class="svc-card__ideal-label">Ideal For</div>
+        <p>Organizations investing significant resources into meetings, conferences, retreats, and incentive experiences that need expert guidance before execution begins.</p>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="svc-card fade-up delay-1">
+      <div class="svc-card__num">02</div>
+      <h3 class="svc-card__title">Hospitality Growth Consulting</h3>
+      <p class="svc-card__desc">Helping restaurants, hotels, resorts, wineries, private clubs, and event venues build stronger event businesses and increase revenue.</p>
+      <div class="svc-card__label">Services Include</div>
+      <ul class="svc-card__list">
+        <li>Event Department Development</li>
+        <li>Revenue Growth Strategy</li>
+        <li>Sales Team Training</li>
+        <li>CRM Implementation</li>
+        <li>Operational Assessments</li>
+        <li>SOP Development</li>
+        <li>Private Dining Programs</li>
+        <li>Event Package Development</li>
+        <li>Client Journey Mapping</li>
+        <li>Marketing Strategy</li>
+      </ul>
+      <div class="svc-card__ideal">
+        <div class="svc-card__ideal-label">Ideal For</div>
+        <p>Hospitality organizations seeking growth, operational excellence, and stronger event revenue performance.</p>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="svc-card fade-up delay-2">
+      <div class="svc-card__num">03</div>
+      <h3 class="svc-card__title">Fractional Revenue &amp; Business Development Leadership</h3>
+      <p class="svc-card__desc">Executive level sales and business development support without the cost of a full-time executive.</p>
+      <div class="svc-card__label">Services Include</div>
+      <ul class="svc-card__list">
+        <li>Fractional Director of Sales</li>
+        <li>Business Development Strategy</li>
+        <li>Strategic Partnerships</li>
+        <li>Market Expansion</li>
+        <li>Account Growth</li>
+        <li>Sales Team Mentorship</li>
+        <li>Revenue Planning</li>
+        <li>Client Retention Strategy</li>
+        <li>Leadership Coaching</li>
+      </ul>
+      <div class="svc-card__ideal">
+        <div class="svc-card__ideal-label">Ideal For</div>
+        <p>Organizations preparing for growth, entering new markets, rebuilding sales teams, or seeking experienced leadership during periods of transition.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     WHY CLIENTS WORK WITH JENNIFER
+══════════════════════════════════════════════ -->
+<section class="why-jennifer">
+  <div class="why-jennifer__inner">
+
+    <div class="why-jennifer__left fade-in">
+      <span class="eyebrow">Why Clients Work With Jennifer</span>
+      <h2>Experience From Every Side of the Table</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="why-jennifer__right fade-up">
+      <p>Most consultants understand one side of the business. Jennifer understands them all.</p>
+      <div class="why-jennifer__understands">
+        <div class="why-jennifer__u-item">She understands what executives need.</div>
+        <div class="why-jennifer__u-item">She understands what corporate planners are responsible for.</div>
+        <div class="why-jennifer__u-item">She understands how venues generate revenue.</div>
+        <div class="why-jennifer__u-item">She understands what hospitality teams need to succeed.</div>
+      </div>
+      <p class="why-jennifer__closer">Most importantly, she understands how to align all of those interests into one successful strategy. That perspective creates better experiences, stronger teams, and more profitable outcomes.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     WHO WE SERVE
+══════════════════════════════════════════════ -->
+<section class="who-we-serve">
+  <div class="who-we-serve__inner">
+    <span class="eyebrow" style="color:var(--gold); margin-bottom:var(--s3); display:block;">Who We Serve</span>
+    <h2>The Organizations We Partner With</h2>
+    <div class="who-grid">
+      <div class="who-item">Corporate Meeting Planners</div>
+      <div class="who-item">Executive Leadership Teams</div>
+      <div class="who-item">Human Resources Leaders</div>
+      <div class="who-item">Executive Assistants</div>
+      <div class="who-item">Hotels and Resorts</div>
+      <div class="who-item">Restaurants</div>
+      <div class="who-item">Private Event Venues</div>
+      <div class="who-item">Wineries</div>
+      <div class="who-item">Hospitality Brands</div>
+      <div class="who-item">Convention Centers</div>
+      <div class="who-item">Destination Organizations</div>
+      <div class="who-item">Growing Businesses</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     SELECTED ENGAGEMENTS
+══════════════════════════════════════════════ -->
+<section class="engagements" id="engagements">
+  <div class="engagements__header">
+    <div>
+      <span class="eyebrow">Portfolio</span>
+      <h2>Selected Engagements</h2>
+    </div>
+    <p>A curated selection of engagements. Each represents a strategic challenge, a business objective, and a measurable outcome.</p>
+  </div>
+
+  <!-- ── Group 1: Corporate Events ── -->
+  <div class="engagements__group">
+    <div class="engagements__group-hd">
+      <span class="engagements__group-label">Corporate Events, Galas &amp; Receptions</span>
+      <div class="engagements__group-rule"></div>
+    </div>
+    <div class="engagements__grid">
+
+      <div class="eng-card eng-card--wide fade-in">
+        <img class="eng-card__img" src="assets/images/photo-palmsprings-gala.jpg" alt="Multi-Day Conference Reception" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Multi-Day Conference Reception</div>
+          <p class="eng-card__desc">Advised on venue strategy, guest experience design, and program flow for a premium multi-day corporate incentive program. Strategic framework aligned attendee experience with organizational business objectives.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-1">
+        <img class="eng-card__img" src="assets/images/photo-navy-gala2.jpg" alt="Gala Dinner" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Gala Dinner</div>
+          <p class="eng-card__desc">Led event sales strategy and revenue development for a luxury hotel grand re-opening. Generated $550,000 in event revenue within six months of launch.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-2">
+        <img class="eng-card__img" src="assets/images/photo-coastal-tablescape.jpg" alt="Executive Leadership Retreat" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Executive Leadership Retreat</div>
+          <p class="eng-card__desc">Designed the strategic framework and guest experience for a high-impact leadership retreat that aligned organizational goals with a memorable, purposeful attendee experience.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-1">
+        <img class="eng-card__img" src="assets/images/photo-neon-cactus.jpg" alt="Annual Corporate Conference" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Annual Corporate Conference</div>
+          <p class="eng-card__desc">Advised on concept, programming, and vendor strategy to transform a traditional sales conference into an immersive, brand-aligned experience. Resulted in the company's highest-rated conference in five years.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-2">
+        <img class="eng-card__img" src="assets/images/photo-tasting-experience.jpg" alt="Luxury Incentive Program" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Luxury Incentive Program</div>
+          <p class="eng-card__desc">Curated an elevated sensory experience within a multi-day incentive program designed to strengthen executive client relationships and reinforce organizational culture.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-1">
+        <img class="eng-card__img" src="assets/images/photo-leather-gifting.jpg" alt="Gifting Suite" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Gifting Suite</div>
+          <p class="eng-card__desc">Implemented a comprehensive sales training program, CRM workflow, and KPI framework that enabled a growing event venue to consistently exceed monthly revenue targets.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-2">
+        <img class="eng-card__img" src="assets/images/photo-portfolio-brand-activation.png" alt="Brand Activation" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Brand Activation</div>
+          <p class="eng-card__desc">Advised on experiential marketing strategy for a brand activation designed to deepen consumer engagement and drive measurable awareness outcomes within a high-traffic event environment.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Group 2: Venues, Hotels & Restaurants ── -->
+  <div class="engagements__group">
+    <div class="engagements__group-hd">
+      <span class="engagements__group-label">Venues, Hotels &amp; Restaurants</span>
+      <div class="engagements__group-rule"></div>
+    </div>
+    <div class="engagements__grid">
+
+      <div class="eng-card eng-card--wide fade-in">
+        <img class="eng-card__img" src="assets/images/photo-vr-farmhouse-exterior.png" alt="Farmhouse LA brand partnership event" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Restaurant Brand Partnership</div>
+          <p class="eng-card__desc">Developed the events department and sales strategy for Farmhouse LA, securing high-profile brand partnerships and building the infrastructure to scale private event revenue.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-1">
+        <img class="eng-card__img" src="assets/images/photo-vr-mayfair-centerpiece.png" alt="Mayfair Hotel luxury event" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Hotel Luxury Dining Event</div>
+          <p class="eng-card__desc">Served as Director of Events for The Mayfair Hotel grand re-opening, generating $550,000 in catering and event revenue within six months of launch.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-2">
+        <img class="eng-card__img" src="assets/images/photo-vr-mayfair-hotel.png" alt="Mayfair Hotel grand re-opening" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Hotel Grand Re-Opening</div>
+          <p class="eng-card__desc">Led event sales strategy and high-impact programming for the grand re-opening of a luxury boutique hotel, establishing the property's event identity and driving early booking momentum.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-1">
+        <img class="eng-card__img" src="assets/images/photo-vr-brunch-event.png" alt="Restaurant private event" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Restaurant Private Event</div>
+          <p class="eng-card__desc">Designed and executed an elevated private dining experience within a restaurant's event program, transforming the space into a branded, guest-forward environment that drove repeat bookings.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-2">
+        <img class="eng-card__img" src="assets/images/photo-vr-riveter-event.png" alt="Venue networking event" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Venue Networking Event</div>
+          <p class="eng-card__desc">Consulted on event programming and venue positioning for a hospitality property seeking to attract corporate and professional clients through curated, high-value experiences.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-1">
+        <img class="eng-card__img" src="assets/images/photo-vr-farmhouse-grazing.png" alt="Farmhouse grazing event" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Farm-to-Table Event Experience</div>
+          <p class="eng-card__desc">Curated a signature farm-to-table grazing experience for Farmhouse LA, elevating the restaurant's private event offering and reinforcing its brand as a premier culinary event destination.</p>
+        </div>
+      </div>
+
+      <div class="eng-card fade-up delay-2">
+        <img class="eng-card__img" src="assets/images/photo-vr-white-rose-tablescape.png" alt="Venue banquet dining event" loading="lazy" />
+        <div class="eng-card__caption">
+          <div class="eng-card__title">Venue Banquet Consulting</div>
+          <p class="eng-card__desc">Advised on banquet event strategy, floor design, and guest experience standards for a venue seeking to attract premium seated dinner clients and increase per-event revenue.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     WHY GOLD STANDARD — DIFFERENCE
+══════════════════════════════════════════════ -->
+<section class="difference">
+  <div class="difference__inner">
+
+    <div class="difference__left fade-in">
+      <span class="eyebrow">The Difference</span>
+      <h2>Why Gold Standard Events Consulting</h2>
+      <div class="rule"></div>
+      <p>Because execution is only as good as the strategy behind it.</p>
+      <p class="difference__closer">We help organizations make informed decisions before investing significant time, energy, and resources.</p>
+    </div>
+
+    <div class="fade-up">
+      <p style="font-size:var(--base); color:var(--text-mid); line-height:1.9; margin-bottom:var(--s3);">Our clients hire us when they want:</p>
+      <div class="difference__list">
+        <div class="difference__item">Objective guidance</div>
+        <div class="difference__item">Independent recommendations</div>
+        <div class="difference__item">Revenue focused thinking</div>
+        <div class="difference__item">Hospitality expertise</div>
+        <div class="difference__item">Strategic leadership</div>
+        <div class="difference__item">Operational insight</div>
+        <div class="difference__item">Executive level perspective</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials__inner">
+
+    <div class="testimonials__header fade-in">
+      <span class="eyebrow">Client Testimonials</span>
+      <h2>What Our Clients Say</h2>
+      <div class="rule rule--center"></div>
+    </div>
+
+    <div class="testimonials__grid">
+
+      <div class="testi-card fade-up">
+        <div class="testi-card__mark">"</div>
+        <p class="testi-card__text">Jennifer brought a level of strategic thinking to our annual conference that we had never experienced before. She didn't just plan — she elevated everything we thought was possible for our events program. The results spoke for themselves.</p>
+        <div class="testi-card__attr">
+          <span class="testi-card__name">Corporate Meeting Planner</span>
+          <span class="testi-card__role">Fortune 500 Financial Services Company</span>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up delay-1">
+        <div class="testi-card__mark">"</div>
+        <p class="testi-card__text">We brought Jennifer in to rebuild our private events department from the ground up. Within months, our bookings doubled. She doesn't just consult — she transforms. Having her expertise in our corner was a game changer for our revenue.</p>
+        <div class="testi-card__attr">
+          <span class="testi-card__name">Restaurant Owner & Operator</span>
+          <span class="testi-card__role">Los Angeles, California</span>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up delay-2">
+        <div class="testi-card__mark">"</div>
+        <p class="testi-card__text">Jennifer is the kind of advisor you want in the room before the decisions are made. Her strategic perspective, hospitality expertise, and calm leadership helped us avoid costly mistakes and deliver our best event program in five years.</p>
+        <div class="testi-card__attr">
+          <span class="testi-card__name">Executive Director</span>
+          <span class="testi-card__role">National Membership Organization</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="final-cta__inner fade-up">
+    <div class="final-cta__eyebrow">Let's Start With a Conversation</div>
+    <h2>Schedule a Complimentary 30-Minute Strategy Call</h2>
+    <p>Gold Standard Events Consulting intentionally works with a limited number of organizations each year.</p>
+    <p>Every engagement begins with a discovery conversation designed to understand your goals, challenges, and opportunities.</p>
+    <p>Whether you are planning a leadership retreat, growing an event department, improving hospitality operations, or strengthening revenue performance, the first step is a conversation.</p>
+    <div class="final-cta__btn-group">
+      <a href="#contact" class="btn--hero-gold">Schedule My Call</a>
+      <a href="assets/jennifer-jones-resume.pdf" download class="btn--hero-outline">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+<section class="contact-v2" id="contact">
+  <div class="contact-v2__inner">
+
+    <div class="contact-v2__info fade-in">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Start the Conversation</h2>
+      <div class="rule"></div>
+      <p>Every engagement begins with a discovery conversation. Use the form to share a bit about your organization and goals, and Jennifer will be in touch within one business day.</p>
+      <div class="contact-v2__detail">
+        <a href="mailto:jennifer@gseventsco.com">jennifer@gseventsco.com</a>
+        <a href="https://gseventsco.com">gseventsco.com</a>
+        <span style="font-size:var(--sm); color:var(--text-light);">Los Angeles, CA &nbsp;·&nbsp; Serving Clients Nationally</span>
+      </div>
+    </div>
+
+    <form class="contact-v2__form fade-up" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Jennifer Smith" required />
+        </div>
+        <div class="form-group">
+          <label for="org">Organization</label>
+          <input type="text" id="org" name="organization" placeholder="Company Name" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required />
+      </div>
+      <div class="form-group">
+        <label for="service">Area of Interest</label>
+        <select id="service" name="service">
+          <option value="">Select a service area...</option>
+          <option>Event Strategy Advisory</option>
+          <option>Hospitality Growth Consulting</option>
+          <option>Fractional Revenue & Business Development Leadership</option>
+          <option>General Inquiry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Me About Your Goals</label>
+        <textarea id="message" name="message" placeholder="Share a bit about your organization, the challenge you are facing, or the opportunity you want to explore..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center;">Send My Inquiry</button>
+    </form>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/images/logo-1.png" alt="Gold Standard Events Consulting" />
+        <p>Independent strategic advisory for events, hospitality, and revenue growth. Based in Southern California. Serving clients nationally and internationally.</p>
+      </div>
+      <div class="footer__col">
+        <h6>Navigation</h6>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Jennifer</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#engagements">Selected Engagements</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="#services">Event Strategy Advisory</a></li>
+          <li><a href="#services">Hospitality Growth Consulting</a></li>
+          <li><a href="#services">Fractional Revenue Leadership</a></li>
+          <li><a href="#services">Independent DMC Advisory</a></li>
+          <li><a href="#services">Venue Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h6>Connect</h6>
+        <ul>
+          <li><a href="#contact">Schedule a Strategy Call</a></li>
+          <li><a href="mailto:jennifer@gseventsco.com">jennifer@gseventsco.com</a></li>
+          <li><a href="assets/jennifer-jones-resume.pdf" download>Download Resume</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Gold Standard Events Consulting. All rights reserved. | gseventsco.com</p>
+      <div class="footer__social">
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

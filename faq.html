@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | Gold Standard Events Consulting — Jennifer Jones</title>
+  <meta name="description" content="Frequently asked questions about working with Gold Standard Events Consulting. Learn about Jennifer Jones's services, process, pricing model, and how to get started." />
+  <link rel="icon" type="image/png" href="assets/images/logo-1.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .faq-hero {
+      padding-top: calc(var(--nav-h) + var(--s7));
+      padding-bottom: var(--s6);
+      background: var(--warm-white);
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-hero h1 { color: var(--text-dark); font-weight: 300; margin-bottom: var(--s2); }
+    .faq-hero p { font-size: var(--md); color: var(--text-mid); max-width: 540px; margin: 0 auto; }
+
+    .faq-section { padding: var(--s8) 0; background: var(--cream); }
+
+    .faq-category {
+      max-width: 820px;
+      margin: 0 auto var(--s7);
+    }
+    .faq-category__label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: var(--s2);
+      margin-bottom: var(--s4);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: var(--s3) 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-question {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--s3);
+      cursor: pointer;
+      padding: var(--s1) 0;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question h4 {
+      font-family: var(--sans);
+      font-size: var(--base);
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .faq-question::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform var(--mid);
+      line-height: 1;
+      margin-top: 2px;
+    }
+    details[open] .faq-question::after {
+      content: '×';
+    }
+    .faq-answer {
+      padding: var(--s2) 0 var(--s3);
+    }
+    .faq-answer p {
+      font-size: var(--sm);
+      line-height: 1.9;
+      color: var(--text-mid);
+      margin-bottom: var(--s2);
+    }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul {
+      margin: var(--s2) 0;
+      padding-left: 0;
+    }
+    .faq-answer ul li {
+      font-size: var(--sm);
+      color: var(--text-mid);
+      padding: 5px 0 5px var(--s3);
+      position: relative;
+    }
+    .faq-answer ul li::before {
+      content: '›';
+      color: var(--gold);
+      position: absolute;
+      left: 0;
+    }
+
+    .faq-cta {
+      background: var(--navy);
+      padding: var(--s7) 0;
+      text-align: center;
+    }
+    .faq-cta h2 { color: var(--white); font-weight: 300; margin-bottom: var(--s3); }
+    .faq-cta p { color: rgba(255,255,255,0.65); font-size: var(--md); max-width: 520px; margin: 0 auto var(--s5); }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav nav--scrolled" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/images/logo-2.png" alt="Gold Standard Events Consulting" id="nav-logo" />
+      </a>
+      <div class="nav__links">
+        <a href="index.html#about"    class="nav__link">About</a>
+        <a href="index.html#services" class="nav__link">Services</a>
+        <a href="index.html#work"     class="nav__link">Portfolio</a>
+        <a href="faq.html"            class="nav__link active">FAQ</a>
+        <a href="index.html#contact"  class="nav__link">Contact</a>
+      </div>
+      <a href="contact.html" class="nav__cta">Work With Me</a>
+      <button class="nav__toggle" aria-label="Open menu" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="nav-overlay__close" id="menu-close">✕</button>
+    <a href="index.html#about"   class="nav-overlay__link">About</a>
+    <a href="index.html#services" class="nav-overlay__link">Services</a>
+    <a href="index.html#work"    class="nav-overlay__link">Portfolio</a>
+    <a href="faq.html"           class="nav-overlay__link">FAQ</a>
+    <a href="contact.html"       class="nav-overlay__link">Work With Me</a>
+  </div>
+
+
+  <!-- ===== Page Hero ===== -->
+  <section class="faq-hero">
+    <span class="eyebrow">Have Questions?</span>
+    <h1>Frequently Asked Questions</h1>
+    <p>Everything you need to know about working with Gold Standard Events Consulting, before we even get on a call.</p>
+  </section>
+
+
+  <!-- ===== FAQ Content ===== -->
+  <section class="faq-section">
+    <div class="container">
+
+
+      <!-- ABOUT THE FIRM -->
+      <div class="faq-category fade-up">
+        <div class="faq-category__label">About Gold Standard Events Consulting</div>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>What is Gold Standard Events Consulting?</h4></summary>
+          <div class="faq-answer">
+            <p>Gold Standard Events Consulting is a boutique strategic event and venue consulting firm founded by Jennifer Jones. With 28 years of experience spanning New York City, Northern California, and Southern California, Jennifer brings a rare combination of corporate event planning expertise and deep restaurant and hospitality venue knowledge to every engagement.</p>
+            <p>The firm serves two distinct client types: corporate meeting planners who need a trusted strategic partner or boutique DMC advisor, and restaurants, event venues, and hospitality properties looking to build, rebuild, or grow their private events programs.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>What makes Gold Standard Events Consulting different from a traditional event planning company?</h4></summary>
+          <div class="faq-answer">
+            <p>Most event planners focus on logistics. Gold Standard Events Consulting focuses on strategy first, then execution. Jennifer doesn't just coordinate vendors and timelines. She builds the business case behind your event, aligns it with measurable goals, and brings 28 years of relationships, market knowledge, and on-the-ground expertise to ensure the outcome is exceptional.</p>
+            <p>For corporate clients, that means operating as a true strategic partner rather than another vendor. For venues, it means rebuilding or building the entire events revenue operation from the ground up, not just offering advice.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>What geographic markets does Jennifer serve?</h4></summary>
+          <div class="faq-answer">
+            <p>Jennifer is based in Southern California and has deep roots across three markets: New York City, Northern California (wine country and Bay Area), and Southern California (Los Angeles, Orange County, and San Diego). She serves clients nationally and internationally for corporate event strategy engagements, and serves the Southern California market as a primary focus for venue consulting work.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>How many clients does Jennifer take on each year?</h4></summary>
+          <div class="faq-answer">
+            <p>By design, Gold Standard Events Consulting works with a select number of clients each year, typically 4 to 5. This is intentional. Jennifer is not a high-volume agency. She is a high-touch strategic partner, and that requires genuine capacity and attention. Working with fewer clients means every engagement gets the full depth of her expertise, relationships, and energy.</p>
+          </div>
+        </details>
+      </div>
+
+
+      <!-- SERVICES -->
+      <div class="faq-category fade-up delay-1">
+        <div class="faq-category__label">Services</div>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>What does Event Strategy Consulting include?</h4></summary>
+          <div class="faq-answer">
+            <p>Event Strategy Consulting is Jennifer's corporate-facing service. She acts as a strategic advisor and boutique DMC partner for corporate meeting planners, helping them design and execute programs that deliver real business outcomes. Services include:</p>
+            <ul>
+              <li>Strategic event concept and programming development</li>
+              <li>Vendor sourcing, vetting, and negotiation oversight</li>
+              <li>Boutique DMC services for local, national, and international events</li>
+              <li>Corporate meetings, conferences, and executive retreats</li>
+              <li>Incentive travel programs and experiential activations</li>
+              <li>Attendee engagement strategy and event ROI planning</li>
+              <li>On-site execution oversight and run-of-show management</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>What does Venue and Restaurant Consulting include?</h4></summary>
+          <div class="faq-answer">
+            <p>Venue Consulting is Jennifer's hospitality-facing service, where she steps in as an outsourced Director of Events for restaurants, event venues, and hospitality properties. This is a comprehensive engagement that may include:</p>
+            <ul>
+              <li>Private events department build or rebuild from scratch</li>
+              <li>Sales team hiring, training, and performance frameworks</li>
+              <li>Revenue strategy and growth planning</li>
+              <li>CRM setup, SOPs, and booking process systems</li>
+              <li>Private dining and venue buyout programming</li>
+              <li>Marketing strategy to attract corporate and social event clients</li>
+              <li>Sales coaching and ongoing mentorship for venue teams</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>Do you also offer DMC services?</h4></summary>
+          <div class="faq-answer">
+            <p>Yes. Jennifer operates as a boutique Destination Management Company advisor, particularly for corporate clients bringing groups into Southern California or other markets where she has established vendor relationships. Rather than functioning as a traditional DMC with large overhead and markup structures, she acts as a strategic DMC partner: curating the right vendor ecosystem, negotiating on your behalf, and overseeing execution, while you contract directly with vendors for full financial transparency.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>Do you handle vendor payments on behalf of clients?</h4></summary>
+          <div class="faq-answer">
+            <p>No, and this is by design. Gold Standard Events Consulting operates as a pure consulting and advisory firm. Clients contract directly with vendors and pay them directly. This eliminates the traditional DMC markup (typically 20 to 30%), keeps your corporate procurement process clean and transparent, and ensures there is no financial liability or middleman overhead layered into your event budget.</p>
+            <p>Jennifer handles the strategy, vendor relationships, negotiation oversight, and execution management. Your finance team works directly with the vendors.</p>
+          </div>
+        </details>
+      </div>
+
+
+      <!-- PROCESS -->
+      <div class="faq-category fade-up delay-1">
+        <div class="faq-category__label">Process and Engagement</div>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>How does the engagement process work?</h4></summary>
+          <div class="faq-answer">
+            <p>Every engagement follows the same foundational approach:</p>
+            <ul>
+              <li><strong>Discovery:</strong> A 30-minute conversation to understand your goals, timeline, and whether we are the right fit for each other.</li>
+              <li><strong>Strategy:</strong> Once engaged, Jennifer builds the strategic framework, event concept, vendor roadmap, and success metrics tailored to your specific goals.</li>
+              <li><strong>Execution:</strong> With the right partners in place, Jennifer oversees every element of execution so you can show up with confidence.</li>
+              <li><strong>Debrief:</strong> Every engagement closes with a results debrief, what worked, what the data shows, and what comes next.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>How long does a typical engagement last?</h4></summary>
+          <div class="faq-answer">
+            <p>It depends on the type of engagement. Corporate event strategy projects typically run from initial scoping through post-event debrief, which can range from 6 weeks to 6 months depending on event complexity. Venue consulting engagements are often structured as longer-term retainers, since building or rebuilding an events department requires sustained effort, typically 3 to 12 months depending on scope.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>What information do I need to have ready before our first call?</h4></summary>
+          <div class="faq-answer">
+            <p>You don't need to have everything figured out. That's part of what the discovery call is for. It helps to have a general sense of:</p>
+            <ul>
+              <li>What type of event or project you are planning</li>
+              <li>Your approximate timeline</li>
+              <li>Your general budget range for the event or the consulting engagement</li>
+              <li>What you are hoping a consulting engagement will help you accomplish</li>
+            </ul>
+            <p>Jennifer will guide the conversation from there.</p>
+          </div>
+        </details>
+      </div>
+
+
+      <!-- PRICING -->
+      <div class="faq-category fade-up delay-2">
+        <div class="faq-category__label">Pricing and Fees</div>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>How is Gold Standard Events Consulting structured for pricing?</h4></summary>
+          <div class="faq-answer">
+            <p>Pricing is structured as a flat consulting retainer, not an hourly rate or a percentage of vendor spend. This keeps the financial relationship clean and aligned: Jennifer's incentive is to deliver the best possible strategy and outcome for you, not to inflate vendor spend.</p>
+            <p>Retainer fees vary based on the scope, complexity, and duration of the engagement. Specific pricing is discussed during the discovery call after Jennifer understands your needs.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>Do you work with events of all budget sizes?</h4></summary>
+          <div class="faq-answer">
+            <p>Gold Standard Events Consulting is best suited for corporate events and hospitality projects with meaningful production budgets. For corporate events, this typically means total event spends starting around $75,000 and scaling significantly from there. For venue consulting, the investment depends on the scope of the operational build and the current state of the program.</p>
+            <p>If you are not sure whether your project is the right fit, the best first step is simply a conversation.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>Can you save my organization money compared to using a traditional DMC?</h4></summary>
+          <div class="faq-answer">
+            <p>Yes, and this is one of the most compelling reasons corporate meeting planners choose to work with Jennifer. Traditional DMC firms typically layer a 20 to 30% management markup on top of all vendor invoices. Because Gold Standard Events Consulting operates as a pure advisory firm where clients contract directly with vendors, that markup disappears entirely. You pay Jennifer a flat consulting fee, and every vendor dollar goes directly to your event, not through an agency margin.</p>
+          </div>
+        </details>
+      </div>
+
+
+      <!-- CORPORATE CLIENTS -->
+      <div class="faq-category fade-up delay-2">
+        <div class="faq-category__label">For Corporate Meeting Planners</div>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>I already have an internal events team. Why would I need a consultant?</h4></summary>
+          <div class="faq-answer">
+            <p>Internal teams are great at what they know. But most corporate events teams face at least one of these challenges: limited bandwidth during peak planning periods, limited local knowledge when events go to unfamiliar markets, limited vendor relationships outside their usual roster, or difficulty elevating production quality without ballooning the budget.</p>
+            <p>Jennifer steps in as a seamless extension of your existing team, filling exactly those gaps without adding headcount, overhead, or the institutional friction of bringing in a large agency.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>We already use a DMC. How is this different?</h4></summary>
+          <div class="faq-answer">
+            <p>Traditional DMCs provide value, but they also come with a significant cost structure and a vested interest in steering you toward their preferred vendors and packages. Jennifer's model is entirely advisory. She has no inventory to sell, no markup to protect, and no vendor exclusivity agreements. Her only incentive is to build the best possible program for your goals and budget. This is a structurally different relationship than a traditional DMC.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>Can you help with events outside of Southern California?</h4></summary>
+          <div class="faq-answer">
+            <p>Yes. Jennifer serves clients nationally and internationally for corporate event strategy engagements. While her deepest on-the-ground relationships are in Southern California, the New York City metro area, and Northern California, her strategic advisory work extends well beyond these markets. She has experience supporting programs in destinations across the country and internationally.</p>
+          </div>
+        </details>
+      </div>
+
+
+      <!-- VENUES -->
+      <div class="faq-category fade-up delay-2">
+        <div class="faq-category__label">For Restaurants and Hospitality Venues</div>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>Our venue does some private events but we know we're leaving revenue on the table. Can you help?</h4></summary>
+          <div class="faq-answer">
+            <p>This is exactly the client Jennifer works with most often. Many restaurants and venues have the space, the team, and the demand, but they lack the systems, the sales discipline, and the strategic infrastructure to capture what they are capable of. Jennifer has rebuilt departments like this multiple times, with results that include 200% revenue increases and generating over $550K in catering and event revenue within six months of a hotel's re-opening.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>We don't have an events team at all. Can you build one from scratch?</h4></summary>
+          <div class="faq-answer">
+            <p>Yes. Jennifer has built private events programs and departments from the ground up, including defining the role structure, writing job descriptions, assisting with hiring, implementing CRM and booking systems, developing sales scripts and rate cards, and creating the operational SOPs that allow a team to run independently. If you are starting from zero, she can get you from zero to operational.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>We have a team but they aren't closing events consistently. Can you help with sales training?</h4></summary>
+          <div class="faq-answer">
+            <p>Yes. Sales training and performance coaching for event sales teams is one of the most impactful things Jennifer does for venue clients. She works with teams on inquiry response, site visit presentation, proposal strategy, objection handling, follow-up cadence, and closing techniques, all specifically tailored to the private events and private dining sales environment.</p>
+          </div>
+        </details>
+      </div>
+
+
+      <!-- GETTING STARTED -->
+      <div class="faq-category fade-up delay-3">
+        <div class="faq-category__label">Getting Started</div>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>How do I know if my project is a good fit?</h4></summary>
+          <div class="faq-answer">
+            <p>The best way to find out is a 30-minute discovery call. Gold Standard Events Consulting is selective, and Jennifer is honest about fit. If your project, timeline, or budget isn't aligned with what she can deliver at the highest level, she will tell you, and she may be able to point you in a better direction. There is no pressure and no obligation from a discovery conversation.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>How do I get started?</h4></summary>
+          <div class="faq-answer">
+            <p>Fill out the inquiry form on the <a href="contact.html" style="color:var(--gold);">Contact page</a> or email Jennifer directly at <a href="mailto:jennifer@gsevents.co" style="color:var(--gold);">jennifer@gsevents.co</a>. She responds to all inquiries within 1 to 2 business days and will schedule a discovery call at a time that works for you.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question"><h4>I have a question that isn't answered here. How do I reach you?</h4></summary>
+          <div class="faq-answer">
+            <p>Send your question directly to <a href="mailto:jennifer@gsevents.co" style="color:var(--gold);">jennifer@gsevents.co</a> and Jennifer will personally respond. At Gold Standard Events Consulting, you are always speaking with Jennifer, not a team member or assistant.</p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== CTA ===== -->
+  <section class="faq-cta">
+    <div class="container">
+      <div class="fade-up">
+        <span class="eyebrow" style="color:var(--gold-light);">Ready to Talk?</span>
+        <h2>Still have questions? Let's have a conversation.</h2>
+        <p>A 30-minute discovery call costs nothing and answers everything. Jennifer personally responds to every inquiry within 1 to 2 business days.</p>
+        <a href="contact.html" class="btn btn--gold">Schedule Your Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/images/logo-1.png" alt="Gold Standard Events Consulting" />
+          <p>Strategic event and venue consulting for leaders who demand results. Based in Southern California, serving clients nationally and internationally.</p>
+        </div>
+        <div class="footer__col">
+          <h6>Navigate</h6>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Jennifer</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#work">Portfolio</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="index.html#services">Event Strategy Consulting</a></li>
+            <li><a href="index.html#services">Venue &amp; Restaurant Consulting</a></li>
+            <li><a href="index.html#services">Corporate Meetings &amp; Incentives</a></li>
+            <li><a href="index.html#services">DMC Services</a></li>
+            <li><a href="index.html#services">Revenue Development</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h6>Connect</h6>
+          <ul>
+            <li><a href="contact.html">Schedule a Discovery Call</a></li>
+            <li><a href="mailto:jennifer@gsevents.co">jennifer@gsevents.co</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Gold Standard Events Consulting. All rights reserved. | gsevents.co</p>
+        <div class="footer__social">
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ accordion — handled natively by <details>/<summary>
+    // Close others when one opens
+    document.querySelectorAll('details').forEach(detail => {
+      detail.addEventListener('toggle', () => {
+        if (detail.open) {
+          document.querySelectorAll('details').forEach(other => {
+            if (other !== detail && other.open) other.open = false;
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

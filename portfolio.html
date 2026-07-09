@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio, Gold Standard Events Consulting | Case Studies & Event Work</title>
+  <meta name="description" content="Explore GS Events' portfolio of strategic event and venue consulting work. Case studies showcasing measurable outcomes for corporate clients and hospitality venues." />
+  <link rel="icon" type="image/png" href="assets/images/logo-1.png" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .case-studies {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s4);
+      margin-top: var(--s6);
+    }
+    .case-study-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .case-study-card--large {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .case-study-card__image {
+      height: 280px;
+      overflow: hidden;
+    }
+    .case-study-card--large .case-study-card__image {
+      height: 100%;
+      min-height: 360px;
+    }
+    .case-study-card__image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .case-study-card:hover .case-study-card__image img {
+      transform: scale(1.04);
+    }
+    .case-study-card__body {
+      padding: var(--s5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .case-study-card--large .case-study-card__body {
+      padding: var(--s6);
+    }
+    .case-study-card__tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--s2);
+    }
+    .case-study-card__body h4 {
+      font-family: var(--serif);
+      font-size: var(--xl);
+      color: var(--text-dark);
+      margin-bottom: var(--s3);
+      line-height: 1.3;
+    }
+    .case-study-card__body p {
+      font-size: var(--sm);
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: var(--s3);
+    }
+    .case-study-card__link {
+      font-size: var(--xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-pale);
+      padding-bottom: 2px;
+      display: inline-block;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .case-study-card__link:hover { color: var(--gold-dark); border-color: var(--gold-dark); }
+    .case-result {
+      display: flex;
+      gap: var(--s4);
+      margin-top: var(--s4);
+    }
+    .case-result__stat { text-align: center; }
+    .case-result__num {
+      font-family: var(--serif);
+      font-size: var(--3xl);
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+    }
+    .case-result__label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 4px;
+      display: block;
+    }
+    @media (max-width: 900px) {
+      .case-studies { grid-template-columns: 1fr; }
+      .case-study-card--large { grid-column: span 1; grid-template-columns: 1fr; }
+      .case-study-card--large .case-study-card__image { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav nav--scrolled" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/images/logo-2.png" alt="Gold Standard Events Consulting" id="nav-logo" />
+      </a>
+      <div class="nav__links">
+        <a href="index.html#about"    class="nav__link">About</a>
+        <a href="index.html#services" class="nav__link">Services</a>
+        <a href="portfolio.html"      class="nav__link active">Portfolio</a>
+        <a href="faq.html"            class="nav__link">FAQ</a>
+        <a href="index.html#contact"  class="nav__link">Contact</a>
+      </div>
+      <a href="contact.html" class="nav__cta" style="background:var(--gold); color:var(--white);">Work With Me</a>
+      <button class="nav__toggle" aria-label="Open menu" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="nav-overlay__close" id="menu-close">✕</button>
+    <a href="index.html#about"    class="nav-overlay__link">About</a>
+    <a href="index.html#services" class="nav-overlay__link">Services</a>
+    <a href="portfolio.html"      class="nav-overlay__link">Portfolio</a>
+    <a href="faq.html"            class="nav-overlay__link">FAQ</a>
+    <a href="index.html#contact"  class="nav-overlay__link">Contact</a>
+  </div>
+
+
+  <!-- ===== Page Hero ===== -->
+  <section class="page-hero">
+    <span class="page-hero__label">Our Work</span>
+    <h1>Portfolio &amp; Case Studies</h1>
+    <p class="page-hero__sub">Real engagements. Measurable outcomes. The Gold Standard in action.</p>
+  </section>
+
+
+  <!-- ===== Portfolio Grid ===== -->
+  <section style="padding: var(--s8) 0; background: var(--cream);">
+    <div class="container">
+
+      <div class="case-studies">
+
+        <!-- Featured Case Study: Large Card -->
+        <div class="case-study-card case-study-card--large fade-in">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-palmsprings-gala.jpg" alt="Palm Springs corporate outdoor gala" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Event Strategy Consulting &middot; Featured</div>
+            <h4>Multi-Day Corporate Incentive Program</h4>
+            <p>
+              A Fortune 500 financial services company needed a trusted partner to manage a high-stakes, multi-city incentive trip for their top 200 performers. Jennifer stepped in as the strategic lead, coordinating the full vendor ecosystem, destination management, programming, and onsite logistics for a seamless, premium experience that exceeded all client expectations.
+            </p>
+            <div class="case-result">
+              <div class="case-result__stat">
+                <span class="case-result__num">200</span>
+                <span class="case-result__label">Attendees</span>
+              </div>
+              <div class="case-result__stat">
+                <span class="case-result__num">4</span>
+                <span class="case-result__label">Cities</span>
+              </div>
+              <div class="case-result__stat">
+                <span class="case-result__num">100%</span>
+                <span class="case-result__label">Client Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="case-study-card fade-up delay-1">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-coastal-tablescape.jpg" alt="Coastal oceanview dining event" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Venue Consulting &middot; Restaurant</div>
+            <h4>Farmhouse LA: Event Sales &amp; Marketing Deck</h4>
+            <p>
+              Created a comprehensive event sales and marketing deck for Farmhouse LA, a restaurant growing their private events department. The deck positioned the venue's event spaces, menus, and brand story to attract corporate and social bookings.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="case-study-card fade-up delay-2">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-navy-gala2.jpg" alt="Navy and gold grand gala at sunset" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Venue Consulting</div>
+            <h4>Hotel Grand Re-Opening: $550K in 6 Months</h4>
+            <p>
+              As part of The Mayfair Hotel's grand re-opening team, Jennifer led event sales strategy and execution, generating over $550,000 in catering and event revenue in just six months through proactive business development, partnerships, and a rebuilt event program.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="case-study-card fade-up delay-1">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-neon-cactus.jpg" alt="Neon cactus themed immersive corporate venue" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Event Strategy Consulting</div>
+            <h4>Annual Corporate Sales Conference &amp; Kickoff</h4>
+            <p>
+              A regional corporation sought a complete reimagining of their annual sales conference, from tired ballroom meeting to immersive, brand-aligned experience. Jennifer developed the concept, programming, and vendor ecosystem, resulting in the company's most highly-rated conference in five years.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="case-study-card fade-up delay-2">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-tasting-experience.jpg" alt="Custom sensory tasting experience activation" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Corporate &amp; Incentives</div>
+            <h4>Executive Leadership Retreat</h4>
+            <p>
+              A national company's C-suite needed a curated, confidential leadership retreat that felt premium and purposeful. GS Events sourced and programmed a 3-day off-site experience, handling venue negotiation, programming, and the experiential touches that made the engagement feel truly elevated.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="case-study-card fade-up delay-1">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-milkcrate.jpg" alt="Creative brand activation with colorful installation" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">DMC Services &middot; Event Strategy</div>
+            <h4>National Conference: Southern California Destination Management</h4>
+            <p>
+              A national organization brought Jennifer in as their local expert for a 500-person annual conference. GS Events handled all destination management, site sourcing, hotel block negotiations, companion programming, and vendor coordination for a seamless attendee experience.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="case-study-card fade-up delay-2">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-leather-gifting.jpg" alt="Curated corporate gifting experience table" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Venue Consulting &middot; Sales Development</div>
+            <h4>Venue Sales Team: Training &amp; Performance Framework</h4>
+            <p>
+              A growing events venue had bookings but lacked a scalable sales system. Jennifer implemented a full sales training program, CRM workflow, and KPI reporting framework that enabled the team to consistently exceed monthly revenue targets and reduce no-close rates by 35%.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 8: Venue Opening -->
+        <div class="case-study-card fade-up delay-1">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-portfolio-venue-opening.png" alt="Venue opening formal dinner" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Venue Opening</div>
+            <h4>Grand Venue Opening</h4>
+            <p>
+              Orchestrated the full event strategy and guest experience for a high-profile venue opening, from concept to execution — establishing the property's brand in market and driving early booking momentum.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 9: Incentive Trip -->
+        <div class="case-study-card fade-up delay-2">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-portfolio-incentive-trip.png" alt="Incentive trip poolside reception" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Incentive Trip</div>
+            <h4>Executive Incentive Trip</h4>
+            <p>
+              Designed and executed a premium incentive travel program for a top-performing sales team, curating every touchpoint from destination selection and hotel negotiations to signature experiences and evening programming.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 10: Brand Activation -->
+        <div class="case-study-card fade-up delay-1">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-portfolio-brand-activation.png" alt="Brand activation experience" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Brand Activation</div>
+            <h4>Immersive Brand Activation</h4>
+            <p>
+              Developed the concept and execution strategy for a high-impact brand activation that generated social buzz, deepened attendee engagement, and drove measurable lift in brand awareness among target demographics.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 11: Sales Incentive -->
+        <div class="case-study-card fade-up delay-2">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-portfolio-sales-incentive.png" alt="Sales incentive outdoor coastal event" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Sales Incentive</div>
+            <h4>Coastal Sales Incentive Program</h4>
+            <p>
+              Managed end-to-end logistics and experience design for a coastal sales incentive program, aligning premium experiences with performance recognition to motivate a high-achieving sales force.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 12: Restaurant Event Activation -->
+        <div class="case-study-card fade-up delay-1">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-portfolio-restaurant-activation.png" alt="Restaurant event activation with live performance" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Restaurant Event Activation</div>
+            <h4>Restaurant Event Activation</h4>
+            <p>
+              Transformed a restaurant's private event program into an immersive guest experience, incorporating live performance and experiential moments that significantly elevated the brand and increased event bookings.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 13: Gala Reception -->
+        <div class="case-study-card fade-up delay-2">
+          <div class="case-study-card__image">
+            <img src="assets/images/photo-portfolio-gala-reception.png" alt="Gala reception floral design" loading="lazy" />
+          </div>
+          <div class="case-study-card__body">
+            <div class="case-study-card__tag">Gala Reception</div>
+            <h4>Annual Gala Reception</h4>
+            <p>
+              Served as strategic event advisor for a high-profile annual gala, guiding venue selection, vendor curation, décor concept, and guest experience design to deliver an evening that exceeded board expectations and exceeded fundraising goals.
+            </p>
+            <a href="contact.html" class="case-study-card__link">Discuss a similar project &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CTA ===== -->
+  <section class="testimonial">
+    <div class="testimonial__inner">
+      <div class="testimonial__mark fade-in">"</div>
+      <p class="testimonial__text fade-up">
+        Every engagement in this portfolio started with a single conversation. Yours can too.
+      </p>
+      <div style="margin-top: var(--s5);">
+        <a href="contact.html" class="btn btn--gold">Schedule Your Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/images/logo-1.png" alt="Gold Standard Events Consulting" />
+          <p>Strategic event and venue consulting for leaders who demand results. Based in Southern California. Serving clients nationally.</p>
+        </div>
+        <div class="footer__col">
+          <h6>Navigation</h6>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Jennifer</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="index.html#services">Event Strategy Consulting</a></li>
+            <li><a href="index.html#services">Venue Consulting</a></li>
+            <li><a href="index.html#services">Corporate Meetings</a></li>
+            <li><a href="index.html#services">Incentive Programs</a></li>
+            <li><a href="index.html#services">Revenue Development</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h6>Connect</h6>
+          <ul>
+            <li><a href="contact.html">Book a Discovery Call</a></li>
+            <li><a href="mailto:jennifer@gseventsco.com">jennifer@gseventsco.com</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Gold Standard Events Consulting. All rights reserved. | gseventsco.com</p>
+        <div class="footer__social">
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
