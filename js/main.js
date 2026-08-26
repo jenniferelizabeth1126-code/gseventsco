@@ -160,4 +160,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+
+  /* ------- Contact forms -------
+     Posts to whatever URL is in the form's action attribute, so the
+     provider can be swapped by editing the HTML only. ------- */
+  document.querySelectorAll('form.js-contact-form').forEach(function (form) {
+    var status = form.querySelector('.form-status');
+    var button = form.querySelector('button[type="submit"]');
+    var label  = button ? button.innerHTML : '';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (status) { status.className = 'form-status'; status.textContent = ''; }
+      if (button) { button.disabled = true; button.innerHTML = 'Sending\u2026'; }
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+      .then(function (res) {
+        if (!res.ok) throw new Error('bad status');
+        form.reset();
+        if (status) {
+          status.className = 'form-status form-status--ok';
+          status.textContent = form.getAttribute('data-success') || 'Thank you. Your inquiry has been sent \u2014 I will be in touch within one business day.';
+        }
+      })
+      .catch(function () {
+        if (status) {
+          status.className = 'form-status form-status--err';
+          status.innerHTML = 'Something went wrong. Please email me directly at <a href="mailto:jennifer@gseventsco.com">jennifer@gseventsco.com</a>.';
+        }
+      })
+      .finally(function () {
+        if (button) { button.disabled = false; button.innerHTML = label; }
+      });
+    });
+  });
+
 });

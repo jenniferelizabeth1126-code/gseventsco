@@ -10,14 +10,14 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://gseventsco.com/" />
   <meta property="og:title" content="Jennifer Jones | Event Strategy Consultant & Hospitality Advisor" />
-  <meta property="og:description" content="28 years of experience. $10M+ in revenue generated. Independent strategic advisory for events, hospitality, and venues. Make better decisions before you spend a dollar on execution." />
+  <meta property="og:description" content="28 years of experience. $15M+ in revenue generated. Independent strategic advisory for events, hospitality, and venues. Make better decisions before you spend a dollar on execution." />
   <meta property="og:url" content="https://gseventsco.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://gseventsco.com/assets/images/headshot-main.PNG" />
   <meta property="og:site_name" content="Gold Standard Events Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Jennifer Jones | Event Strategy Consultant & Hospitality Advisor" />
-  <meta name="twitter:description" content="28 years of experience. $10M+ in revenue generated. Independent strategic advisory for events, hospitality, and venues." />
+  <meta name="twitter:description" content="28 years of experience. $15M+ in revenue generated. Independent strategic advisory for events, hospitality, and venues." />
   <meta name="twitter:image" content="https://gseventsco.com/assets/images/headshot-main.PNG" />
   <link rel="icon" href="assets/images/logo-1.png" type="image/png" />
   <link rel="stylesheet" href="css/style.css" />
@@ -987,6 +987,108 @@
     @media (max-width: 900px) {
       .testimonials__grid { grid-template-columns: 1fr; gap: var(--s3); }
     }
+
+    /* ── EVENT RESCUE BAND ────────────────────────────── */
+    .rescue-band {
+      background: var(--navy);
+      color: var(--white);
+      padding: var(--s7) 0;
+    }
+    .rescue-band__inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 var(--s4);
+      text-align: center;
+    }
+    .rescue-band__eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      display: block;
+      margin-bottom: var(--s3);
+    }
+    .rescue-band h2 {
+      color: var(--white);
+      font-weight: 300;
+      margin-bottom: var(--s3);
+    }
+    .rescue-band__lede {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: var(--md);
+      color: var(--gold-pale);
+      margin-bottom: var(--s3);
+    }
+    .rescue-band__body {
+      font-size: var(--sm);
+      color: rgba(255,255,255,0.78);
+      max-width: 62ch;
+      margin: 0 auto var(--s4);
+    }
+    .rescue-band__lede-kinds {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      padding: var(--s2) 0;
+      border-top: 1px solid rgba(255,255,255,0.16);
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+      margin-bottom: var(--s3);
+    }
+    .rescue-band__tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.14);
+      margin-bottom: var(--s5);
+      text-align: left;
+    }
+    .rescue-band__tier {
+      background: var(--navy);
+      padding: var(--s3);
+    }
+    .rescue-band__tier strong {
+      display: block;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: var(--lg);
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .rescue-band__tier span {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+    .btn--rescue-band {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gold);
+      color: var(--white);
+      border: 1px solid var(--gold);
+      padding: 18px 34px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transition: background var(--fast), border-color var(--fast);
+    }
+    .btn--rescue-band:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+    .rescue-band__note {
+      margin-top: var(--s3);
+      font-size: var(--xs);
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+    }
   </style>
 </head>
 <body>
@@ -1002,6 +1104,7 @@
     <div class="nav__links">
       <a href="#about"       class="nav__link">About</a>
       <a href="#services"    class="nav__link">Services</a>
+      <a href="event-rescue.html" class="nav__link">Event Rescue</a>
       <a href="#engagements" class="nav__link">Selected Engagements</a>
       <a href="faq.html"     class="nav__link">FAQ</a>
       <a href="#contact"     class="nav__link">Contact</a>
@@ -1017,6 +1120,7 @@
   <button class="nav-overlay__close" id="menu-close">✕</button>
   <a href="#about"       class="nav-overlay__link">About</a>
   <a href="#services"    class="nav-overlay__link">Services</a>
+  <a href="event-rescue.html" class="nav-overlay__link">Event Rescue</a>
   <a href="#engagements" class="nav-overlay__link">Selected Engagements</a>
   <a href="faq.html"     class="nav-overlay__link">FAQ</a>
   <a href="#contact"     class="nav-overlay__link">Contact</a>
@@ -1090,7 +1194,7 @@
       <span class="results-strip__label">Years of Industry Experience</span>
     </div>
     <div class="results-strip__item fade-up delay-1">
-      <span class="results-strip__num">$10M+</span>
+      <span class="results-strip__num">$15M+</span>
       <span class="results-strip__label">Revenue Generated</span>
     </div>
     <div class="results-strip__item fade-up delay-2">
@@ -1294,6 +1398,38 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     EVENT RESCUE BAND
+══════════════════════════════════════════════ -->
+<section class="rescue-band" id="event-rescue">
+  <div class="rescue-band__inner">
+    <span class="rescue-band__eyebrow">When the Event Is Already in Motion</span>
+    <h2>Event Rescue</h2>
+    <p class="rescue-band__lede fade-in">When the stakes are high, the timeline is short, and you need experienced guidance now.</p>
+    <p class="rescue-band__lede-kinds">Corporate Events &nbsp;·&nbsp; Conferences &nbsp;·&nbsp; Galas &nbsp;·&nbsp; Weddings &nbsp;·&nbsp; Private Celebrations</p>
+    <p class="rescue-band__body fade-up">The venue is contracted. Vendors are hired. Invitations have gone out. And something isn't working. Event Rescue provides immediate, experienced support for events already in motion — senior-level intervention when there is little room for trial and error.</p>
+
+    <div class="rescue-band__tiers fade-up">
+      <div class="rescue-band__tier">
+        <strong>Event Rescue Strategy Session</strong>
+        <span>Events Within 30 Days · 90 Min · $495</span>
+      </div>
+      <div class="rescue-band__tier">
+        <strong>48-Hour Planning Rescue</strong>
+        <span>Events Within One Week</span>
+      </div>
+      <div class="rescue-band__tier">
+        <strong>Emergency Coordination &amp; Takeover</strong>
+        <span>Immediate</span>
+      </div>
+    </div>
+
+    <a href="event-rescue.html" class="btn--rescue-band">Request Event Rescue Support</a>
+    <div class="rescue-band__note">Urgent engagements are accepted based on availability.</div>
   </div>
 </section>
 
@@ -1613,7 +1749,9 @@
       </div>
     </div>
 
-    <form class="contact-v2__form fade-up" action="https://formspree.io/f/your-form-id" method="POST">
+    <form class="contact-v2__form fade-up js-contact-form" action="https://formspree.io/f/xdenopow" method="POST">
+      <input type="hidden" name="_subject" value="New inquiry from gseventsco.com (home page)" />
+      <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
       <div class="form-row">
         <div class="form-group">
           <label for="name">Your Name</label>
@@ -1636,6 +1774,7 @@
           <option>Hospitality Growth Consulting</option>
           <option>Fractional Revenue & Business Development Leadership</option>
           <option>Sales & Marketing Strategy</option>
+          <option>Event Rescue / Urgent Event Support</option>
           <option>General Inquiry</option>
         </select>
       </div>
@@ -1644,6 +1783,7 @@
         <textarea id="message" name="message" placeholder="Share a bit about your organization, the challenge you are facing, or the opportunity you want to explore..." required></textarea>
       </div>
       <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center;">Send My Inquiry</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
     </form>
 
   </div>
@@ -1666,6 +1806,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Jennifer</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="event-rescue.html">Event Rescue</a></li>
           <li><a href="#engagements">Selected Engagements</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -1678,6 +1819,7 @@
           <li><a href="#services">Hospitality Growth Consulting</a></li>
           <li><a href="#services">Fractional Revenue Leadership</a></li>
           <li><a href="#services">Sales &amp; Marketing Strategy</a></li>
+          <li><a href="event-rescue.html">Event Rescue &amp; Last-Minute Support</a></li>
           <li><a href="#services">Independent DMC Advisory</a></li>
           <li><a href="#services">Venue Consulting</a></li>
         </ul>
@@ -1686,6 +1828,7 @@
         <h6>Connect</h6>
         <ul>
           <li><a href="https://calendly.com/jennifer-gseventsco/30min" target="_blank">Schedule a Strategy Call</a></li>
+          <li><a href="event-rescue.html#request">Request Event Rescue Support</a></li>
           <li><a href="mailto:jennifer@gseventsco.com">jennifer@gseventsco.com</a></li>
           <li><a href="assets/jennifer-jones-resume.pdf" download>Download Resume</a></li>
           <li><a href="https://www.linkedin.com/in/jenniferejones26" target="_blank">LinkedIn</a></li>

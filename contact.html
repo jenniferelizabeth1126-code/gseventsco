@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact, Gold Standard Events Consulting | Book a Discovery Call with Jennifer Jones</title>
-  <meta name="description" content="Ready to work with GS Events? Schedule a discovery call with Jennifer Jones to discuss your event strategy or venue consulting needs." />
+  <title>Schedule a Strategy Call | Contact Jennifer Jones | Gold Standard Events Consulting</title>
+  <meta name="description" content="Schedule a complimentary 30-minute strategy call with Jennifer Jones of Gold Standard Events Consulting. Discuss your event strategy, venue consulting, or hospitality growth needs." />
+  <meta name="keywords" content="contact Jennifer Jones, schedule strategy call, event consulting inquiry, venue consulting contact, hospitality advisor Los Angeles, Gold Standard Events contact, hire event consultant" />
+  <meta name="author" content="Jennifer Jones" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gseventsco.com/contact.html" />
+  <meta property="og:title" content="Schedule a Strategy Call | Jennifer Jones | Gold Standard Events Consulting" />
+  <meta property="og:description" content="Every engagement begins with a conversation. Schedule your complimentary 30-minute strategy call with Jennifer Jones today." />
+  <meta property="og:url" content="https://gseventsco.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://gseventsco.com/assets/images/headshot-main.PNG" />
+  <meta property="og:site_name" content="Gold Standard Events Consulting" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Schedule a Strategy Call | Jennifer Jones" />
+  <meta name="twitter:description" content="Every engagement begins with a conversation. Book your complimentary strategy call today." />
+  <meta name="twitter:image" content="https://gseventsco.com/assets/images/headshot-main.PNG" />
   <link rel="icon" type="image/png" href="assets/images/logo-1.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -19,6 +33,7 @@
       <div class="nav__links">
         <a href="index.html#about"    class="nav__link">About</a>
         <a href="index.html#services" class="nav__link">Services</a>
+        <a href="event-rescue.html"   class="nav__link">Event Rescue</a>
         <a href="index.html#work"     class="nav__link">Portfolio</a>
         <a href="contact.html"        class="nav__link active">Contact</a>
       </div>
@@ -33,6 +48,7 @@
     <button class="nav-overlay__close" id="menu-close">✕</button>
     <a href="index.html#about"    class="nav-overlay__link">About</a>
     <a href="index.html#services" class="nav-overlay__link">Services</a>
+    <a href="event-rescue.html"   class="nav-overlay__link">Event Rescue</a>
     <a href="index.html#work"     class="nav-overlay__link">Portfolio</a>
     <a href="contact.html"        class="nav-overlay__link">Contact</a>
   </div>
@@ -93,7 +109,9 @@
         <!-- Form -->
         <div class="contact-form fade-up delay-2">
           <h3>Send an Inquiry</h3>
-          <form>
+          <form class="js-contact-form" action="https://formspree.io/f/xdenopow" method="POST">
+            <input type="hidden" name="_subject" value="New inquiry from gseventsco.com (contact page)" />
+            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name</label>
@@ -122,6 +140,7 @@
                 <option value="event-strategy">Event Strategy Consulting</option>
                 <option value="venue-consulting">Venue & Restaurant Consulting</option>
                 <option value="dmc">DMC / Destination Management</option>
+                <option value="event-rescue">Event Rescue / Urgent Event Support</option>
                 <option value="other">Other / Not Sure Yet</option>
               </select>
             </div>
@@ -150,6 +169,7 @@
             <p style="font-size:11px; color:var(--text-light); text-align:center; margin-top:var(--s2);">
               Your information is kept confidential and will only be used to respond to your inquiry.
             </p>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
 
@@ -165,7 +185,7 @@
       <p class="testimonial__text fade-up">
         The only consultant I'll recommend to my team when they need the best.
       </p>
-      <div class="testimonial__name fade-up delay-1">— National Sales Director</div>
+      <div class="testimonial__name fade-up delay-1">National Sales Director</div>
       <div class="testimonial__role fade-up delay-2">Fortune 500 Financial Services Company</div>
     </div>
   </section>
