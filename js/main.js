@@ -1,5 +1,5 @@
 /* ============================================================
-   GS Events — main.js
+   GS Events: main.js
    Navigation, Animations, Form Handling
    ============================================================ */
 
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollThreshold = 60;
 
   function updateNav() {
-    // Nav is always white — just add shadow on scroll for depth
+    // Nav is always white: just add shadow on scroll for depth
     if (window.scrollY > scrollThreshold) {
       nav?.classList.add('nav--scrolled');
       nav?.classList.remove('nav--top');

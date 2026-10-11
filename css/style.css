@@ -1,5 +1,5 @@
 /* ============================================================
-   Gold Standard Events — gsevents.co
+   Gold Standard Events: gsevents.co
    Light · Warm · Editorial Design System
    ============================================================ */
 
@@ -26,7 +26,7 @@
   --serif:  'Cormorant Garamond', Georgia, serif;
   --sans:   'Jost', 'Helvetica Neue', Arial, sans-serif;
 
-  /* Sizes — generous for readability */
+  /* Sizes: generous for readability */
   --xs:   0.9rem;
   --sm:   1.0625rem;
   --base: 1.1875rem;
@@ -94,7 +94,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 .eyebrow {
   display: inline-block;
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -112,7 +112,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
   align-items: center;
   gap: 8px;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -166,7 +166,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 
 .nav__links { display: flex; align-items: center; gap: var(--s5); }
 .nav__link {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -185,10 +185,10 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 .nav__link:hover, .nav__link.active { color: var(--gold); }
 .nav__link:hover::after, .nav__link.active::after { width: 100%; }
 
-/* Nav is always white — no transparent override needed */
+/* Nav is always white: no transparent override needed */
 
 .nav__cta {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -238,7 +238,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 
 
 /* ════════════════════════════════════════
-   HERO — Light, Editorial, Split Layout
+   HERO: Light, Editorial, Split Layout
 ════════════════════════════════════════ */
 .hero {
   position: relative;
@@ -260,7 +260,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
   z-index: 2;
 }
 .hero__eyebrow {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -363,7 +363,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
   margin-bottom: 6px;
 }
 .intro-strip__label {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -505,12 +505,12 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
   align-items: center;
   gap: 8px;
 }
-.service-card__list li::before { content: '—'; color: var(--gold); }
+.service-card__list li::before { content: ''; display: inline-block; width: 12px; height: 1px; margin-right: 10px; vertical-align: middle; background: var(--gold); }
 .service-card__link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -643,7 +643,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
   margin-bottom: var(--s4);
 }
 .testimonial__name {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -669,7 +669,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 }
 .ideal-card h4 {
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -722,7 +722,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 .footer__brand img { height: 80px; margin-bottom: var(--s3); }
 .footer__brand p { font-size: var(--sm); color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 270px; }
 .footer__col h6 {
-  font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--gold); margin-bottom: var(--s3);
 }
 .footer__col li { margin-bottom: 10px; }
@@ -733,7 +733,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
   font-size: var(--xs); color: rgba(255,255,255,0.35);
 }
 .footer__social { display: flex; gap: var(--s3); }
-.footer__social a { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color var(--fast); }
+.footer__social a { font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color var(--fast); }
 .footer__social a:hover { color: var(--gold); }
 
 
@@ -749,7 +749,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 }
 .page-hero__label {
   display: block;
-  font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold); margin-bottom: var(--s2);
 }
 .page-hero h1 { color: var(--text-dark); font-weight: 300; margin-bottom: var(--s3); }
@@ -764,7 +764,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 .contact-details { margin-top: var(--s5); display: flex; flex-direction: column; gap: var(--s3); }
 .contact-detail { display: flex; gap: var(--s3); }
 .contact-detail__label {
-  font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--gold); min-width: 90px; padding-top: 2px;
 }
 .contact-detail__value { font-size: var(--sm); color: var(--text-mid); }
@@ -778,7 +778,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 .contact-form h3 { font-family: var(--serif); font-size: var(--2xl); color: var(--text-dark); margin-bottom: var(--s4); }
 .form-group { margin-bottom: var(--s3); }
 .form-group label {
-  display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--text-mid); margin-bottom: 8px;
 }
 .form-group input, .form-group select, .form-group textarea {
@@ -852,7 +852,7 @@ p  { font-size: var(--md); line-height: 1.9; color: var(--text-mid); }
 
 
 /* ---- Contact form status message ---- */
-.form-status { margin-top: 16px; font-size: 14px; line-height: 1.55; text-align: center; }
+.form-status { margin-top: 16px; font-size: 15.5px; line-height: 1.55; text-align: center; }
 .form-status:empty { display: none; }
 .form-status--ok  { color: #2E6B4F; background: #EAF3EE; border: 1px solid #C6DFD1; padding: 12px 16px; border-radius: 4px; }
 .form-status--err { color: #9B3B2C; background: #F8EDEA; border: 1px solid #E4C7C0; padding: 12px 16px; border-radius: 4px; }
