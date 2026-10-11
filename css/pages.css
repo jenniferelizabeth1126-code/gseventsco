@@ -51,7 +51,7 @@
 .signals { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
 .signals__media { position: sticky; top: calc(var(--nav-h) + 2rem); }
 .signals__media .gilt-frame { overflow: hidden; }
-.signals__media img { width: 100%; height: auto; aspect-ratio: 4 / 3.4; object-fit: cover; }
+.signals__media img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; display: block; }
 .signals__list { list-style: none; margin: var(--s4) 0 0; padding: 0; counter-reset: sig; }
 .signals__list li { position: relative; padding: 1.25rem 0 1.25rem 3.6rem; border-bottom: 1px solid var(--border); font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.6rem); line-height: 1.3; color: var(--navy); }
 .signals__list li::before { counter-increment: sig; content: counter(sig, decimal-leading-zero); position: absolute; left: 0; top: 1.55rem; font-family: var(--display); font-size: 1rem; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); }
