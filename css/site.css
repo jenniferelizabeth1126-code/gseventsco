@@ -1604,3 +1604,99 @@ h2 em, h3 em { color: var(--gold-dark); }
 /* LinkedIn link under the bio */
 .about-v2__resume-link { color: var(--gold-ink); font-size: 13.5px; text-decoration: none; border-bottom: 2px solid var(--gold); }
 .about-v2__resume-link:hover { color: var(--navy); border-color: var(--navy); }
+
+/* ══════════════════════════════════════════════════════════════
+   v7: ACCESSIBILITY (WCAG 2.2 AA) + MOBILE FIXES
+   ══════════════════════════════════════════════════════════════ */
+:root { --text-light: #6E665C; }
+
+/* Readable text on navy */
+.results-strip__label { color: rgba(255,255,255,0.74); }
+.testi-card__role { color: rgba(255,255,255,0.74); }
+.testi-card__name { color: var(--gold-light); }
+.footer__brand p, .footer__col li a { color: rgba(255,255,255,0.74); }
+.footer__social a { color: rgba(255,255,255,0.74); }
+.footer__bottom p { color: rgba(255,255,255,0.7); font-size: 0.92rem; line-height: 1.6; }
+.footer__col h2.footer__heading { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin: 0 0 var(--s3); line-height: 1.4; }
+
+/* Readable gold on light grounds */
+.philosophy__left h2 em { color: var(--gold-dark); }
+.hero-v2__before-line--last { color: var(--gold-ink); }
+.contact-v2__detail span { color: var(--text-mid) !important; }
+.about-v2__not h3 { font-family: var(--sans); font-size: 14.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin: 0 0 var(--s3); }
+
+/* Skip link */
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 2000; background: var(--navy); color: #fff; padding: 0.8rem 1.2rem; font-weight: 600; text-decoration: none; transition: top .2s ease; }
+.skip-link:focus { top: 1rem; }
+
+/* Keyboard focus that is always visible */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.hero-lux a:focus-visible, .hero-lux button:focus-visible, .final-cta a:focus-visible, .pg--navy a:focus-visible, .footer a:focus-visible { outline-color: #fff; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+
+/* Slideshow pause control (WCAG 2.2.2) */
+.hero-lux__pause { position: absolute; z-index: 3; left: max(var(--s4), calc((100vw - var(--max)) / 2 + var(--s4))); top: calc(var(--nav-h) + 1.4rem); display: inline-flex; align-items: center; gap: 0.5rem; min-height: 40px; padding: 0.5rem 0.9rem; background: rgba(30,45,64,0.55); color: #fff; border: 1px solid rgba(255,255,255,0.5); font: 600 12px/1 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.hero-lux__pause:hover { background: rgba(30,45,64,0.85); }
+.hero-lux__pause i { display: inline-block; width: 10px; height: 10px; border-left: 3px solid currentColor; border-right: 3px solid currentColor; }
+.hero-lux__pause[aria-pressed="true"] i { width: 0; height: 0; border-right: 0; border-left: 10px solid currentColor; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+.hero-lux.is-paused .hero-lux__slides img { transition: opacity .6s ease; transform: none; }
+.hero-lux.is-paused .gilt { animation: none !important; }
+/* The metallic sheen plays a few times, then rests */
+.hero-lux__title .gilt { animation-iteration-count: 3 !important; }
+
+/* Portfolio captions: always readable on touch screens and for keyboard users */
+.eng-card:focus-within .eng-card__caption { transform: translateY(0); }
+@media (hover: none), (max-width: 760px) {
+  .eng-card { background: var(--navy); }
+  .eng-card__caption { position: static; transform: none !important; background: var(--navy); padding: 1rem 1.1rem 1.2rem; }
+  .eng-card__title { font-size: 1.15rem; }
+  .eng-card__desc { font-size: 0.98rem; color: rgba(255,255,255,0.82); }
+}
+
+/* ── Mobile layout fixes ── */
+@media (max-width: 900px) {
+  /* Approach cards: photo fills its frame */
+  .approach.native .ap-panel__img img { left: 0; width: 100%; transform: none !important; }
+  /* About photo keeps a natural portrait shape */
+  .about-v2__photo { max-width: 360px; margin: 0 auto; }
+  .about-v2__photo img { min-height: 0; aspect-ratio: 4 / 5; height: auto; }
+}
+@media (max-width: 760px) {
+  /* Luxury collage: simple and uncluttered */
+  .lux__media { height: auto; display: grid; grid-template-columns: 1fr; gap: 0; }
+  .lux__img { position: relative; transform: none !important; }
+  .lux__img--main { width: 100%; height: auto; aspect-ratio: 4 / 3; left: auto; top: auto; }
+  .lux__img--accent { right: auto; bottom: auto; width: 58%; height: auto; aspect-ratio: 4 / 3; margin: -3.5rem 0 0 auto; z-index: 1; }
+  .lux__badge { position: relative; left: auto; bottom: auto; transform: none !important; margin: -3.2rem 0 0 0; width: max-content; max-width: 40%; padding: 0.8rem 1rem; z-index: 2; }
+  .lux__badge span { font-size: 1.35rem; }
+  /* Service tabs: show every choice instead of a hidden sideways scroll */
+  .svc-tabs__nav { flex-wrap: wrap; overflow: visible; gap: 0.5rem; }
+  .svc-tabs__nav button { flex: 1 1 calc(50% - 0.5rem); min-height: 64px; border: 1px solid var(--border); padding: 0.7rem 0.8rem; font-size: 0.98rem; background: #fff; }
+  .svc-tabs__nav button.is-active { border-color: var(--gold); background: var(--cream); padding-left: 0.8rem; box-shadow: inset 0 -3px 0 var(--gold); }
+  /* Footer bottom line */
+  .footer__bottom { gap: 0.6rem; }
+}
+@media (max-width: 560px) {
+  /* Results strip: whole words, last item spans the row */
+  .results-strip__num { overflow-wrap: normal; word-break: normal; font-size: clamp(1.45rem, 6.6vw, 2rem); }
+  .results-strip__item:last-child { grid-column: 1 / -1; }
+  .results-strip__label { letter-spacing: 0.1em; }
+  /* Comfortable tap targets */
+  .footer__col li a, .footer__social a { display: inline-block; padding: 0.35rem 0; }
+}
+@media (max-width: 380px) {
+  .svc-tabs__nav button { flex-basis: 100%; }
+}
+@media (max-width: 760px) {
+  .hero-lux__pause { top: calc(var(--nav-h) + 0.6rem); left: auto; right: 1rem; width: 44px; height: 44px; padding: 0; justify-content: center; border-radius: 50%; }
+  .hero-lux__pause span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .hero-lux__eyebrow { max-width: calc(100% - 56px); }
+}
+/* Reflow at 320px (WCAG 1.4.10) */
+@media (max-width: 400px) {
+  .engagements__group-label { white-space: normal; }
+  .rescue-strip__link, .btn--hero-gold, .btn--hero-outline, .hero-lux__ghost { white-space: normal; max-width: 100%; text-align: center; }
+  .contact-v2__meta { grid-template-columns: 1fr; gap: 0.2rem; }
+  .contact-v2__meta dd { margin-bottom: 0.8rem; }
+}
+.contact-v2__meta dd, .contact-v2__detail a { min-width: 0; overflow-wrap: anywhere; }

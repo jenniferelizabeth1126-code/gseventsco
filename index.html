@@ -32,6 +32,7 @@
     "email": "jennifer@gseventsco.com",
     "description": "Strategic event consulting for corporations, venues, and private clients: corporate event strategy, DMC advisory, venue and restaurant consulting, sales and marketing strategy, private and executive events, and Event Rescue.",
         "areaServed": ["United States", "International"],
+    "sameAs": ["https://www.linkedin.com/in/jenniferejones26"],
     "knowsAbout": ["Luxury event planning", "Galas", "Brand strategy", "Corporate event strategy", "Destination management (DMC) advisory", "Venue consulting", "Restaurant private events", "Event sales strategy", "Board retreats", "Executive offsites", "Private events", "Team building", "Brand activations", "Conferences", "Incentive programs"],
     "makesOffer": [
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Event Strategy & DMC Services"}},
@@ -51,6 +52,7 @@
   <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- ══════════════════════════════════════════════
      NAVIGATION
@@ -69,14 +71,14 @@
       <a href="#contact"     class="nav__link">Contact</a>
     </div>
     <a href="https://calendly.com/jennifer-gseventsco/30min" target="_blank" class="nav__cta">Book a Consultation</a>
-    <button class="nav__toggle" aria-label="Open menu" id="menu-toggle">
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" id="menu-toggle">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<div class="nav-overlay" id="nav-overlay">
-  <button class="nav-overlay__close" id="menu-close">✕</button>
+<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site menu">
+  <button class="nav-overlay__close" id="menu-close" aria-label="Close menu">✕</button>
   <a href="#about"       class="nav-overlay__link">About</a>
   <a href="#services"    class="nav-overlay__link" data-tab="corporate">Corporate &amp; DMC</a>
   <a href="#luxury"      class="nav-overlay__link">Luxury &amp; Private Events</a>
@@ -90,18 +92,20 @@
 </div>
 
 
+<main id="main">
 <!-- ══════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════ -->
 <section class="hero-lux" id="home">
   <div class="hero-lux__slides" aria-hidden="false">
-      <img src="assets/images/web/lux-sunset-dinner.jpg" alt="Sunset dinner on a resort terrace" class="is-on" />
+      <img src="assets/images/web/lux-sunset-dinner.jpg" alt="Sunset dinner on a resort terrace" class="is-on" fetchpriority="high" />
       <img src="assets/images/web/lux-candlelit-dinner.jpg" alt="Candlelit gala tables with tropical florals" />
       <img src="assets/images/web/lux-garden-gazebo.jpg" alt="Garden gazebo dinner reception" loading="lazy" />
       <img src="assets/images/web/lux-oceanview-terrace.jpg" alt="Oceanview terrace event set for dinner" loading="lazy" />
       <img src="assets/images/web/lux-white-lounge.jpg" alt="Modern lounge setup for an evening event" loading="lazy" />
   </div>
   <div class="hero-lux__shade"></div>
+  <button type="button" class="hero-lux__pause" aria-pressed="false"><i aria-hidden="true"></i><span>Pause slideshow</span></button>
   <p class="hero-lux__script" aria-hidden="true">Corporate.<br />Private.<br />Unforgettable.<span class="swash"></span></p>
   <p class="hero-lux__mark" aria-hidden="true">Corporate &nbsp;&bull;&nbsp; Luxury &nbsp;&bull;&nbsp; Venues <span class="dash"></span></p>
   <div class="hero-lux__content">
@@ -321,7 +325,7 @@
         <article class="ap-panel">
           <div class="ap-panel__img"><img src="assets/images/web/lux-venue-opening.jpg" alt="Candlelit tablescape with tropical florals" loading="lazy" /></div>
           <div class="ap-panel__body">
-            <span class="ap-panel__n">01</span>
+            <span class="ap-panel__n" aria-hidden="true">01</span>
             <h3>Discover</h3>
             <p>We start with a conversation about your goals, guests, budget, and the feeling you want the room to have the moment people walk in.</p>
           </div>
@@ -329,7 +333,7 @@
         <article class="ap-panel">
           <div class="ap-panel__img"><img src="assets/images/web/lux-bluff-tablescape.jpg" alt="Oceanview tablescape designed for an executive dinner" loading="lazy" /></div>
           <div class="ap-panel__body">
-            <span class="ap-panel__n">02</span>
+            <span class="ap-panel__n" aria-hidden="true">02</span>
             <h3>Design</h3>
             <p>A clear concept, layout, and guest experience plan, with a budget that makes sense and nothing left to guesswork.</p>
           </div>
@@ -337,7 +341,7 @@
         <article class="ap-panel">
           <div class="ap-panel__img"><img src="assets/images/web/lux-florals.jpg" alt="Lush custom floral arrangement" loading="lazy" /></div>
           <div class="ap-panel__body">
-            <span class="ap-panel__n">03</span>
+            <span class="ap-panel__n" aria-hidden="true">03</span>
             <h3>Curate</h3>
             <p>Venue, vendors, entertainment, and every detail selected, negotiated, and managed by someone who has sat on every side of the table.</p>
           </div>
@@ -345,14 +349,14 @@
         <article class="ap-panel">
           <div class="ap-panel__img"><img src="assets/images/web/lux-resort-conference.jpg" alt="Resort terrace set for a multi-day conference dinner" loading="lazy" /></div>
           <div class="ap-panel__body">
-            <span class="ap-panel__n">04</span>
+            <span class="ap-panel__n" aria-hidden="true">04</span>
             <h3>Deliver</h3>
             <p>We run the event on site, from first arrival to final toast, so you and your guests can simply enjoy it.</p>
           </div>
         </article>
         <article class="ap-panel ap-panel--cta">
           <div class="ap-panel__cta">
-            <span class="ap-panel__n">GS</span>
+            <span class="ap-panel__n" aria-hidden="true">GS</span>
             <h3>Ready When You Are.</h3>
             <p>Tell us what you are planning and we will map out the path together.</p>
             <a href="#contact" class="btn--hero-gold">Start Planning</a>
@@ -410,7 +414,7 @@
         </div>
 
         <div class="about-v2__not fade-up delay-2">
-          <h4>What We Are Not</h4>
+          <h3>What We Are Not</h3>
           <div class="about-v2__not-item">We are not a cookie-cutter planner.</div>
           <div class="about-v2__not-item">We are not a commission-driven vendor.</div>
           <div class="about-v2__not-item">We are not a one-size-fits-all agency.</div>
@@ -474,7 +478,7 @@
         <div class="svc-panel__img"><img src="assets/images/web/lux-resort-conference.jpg" alt="Resort terrace set for a multi-day corporate program" loading="lazy" /></div>
         <div class="svc-panel__body">
           <div>
-            <span class="svc-panel__n">01</span>
+            <span class="svc-panel__n" aria-hidden="true">01</span>
             <h3>Corporate Events &amp; DMC Services</h3>
             <p class="svc-panel__desc">A boutique destination management partner and strategic advisor for corporate meeting planners, executive teams, and HR leaders, locally, nationally, and internationally.</p>
             <div class="svc-card__ideal"><div class="svc-card__ideal-label">Ideal For</div><p>Corporate meeting planners and organizations that need local market expertise, a trusted extension of their team, and an event strategy tied to real business goals.</p></div>
@@ -489,7 +493,7 @@
         <div class="svc-panel__img"><img src="assets/images/web/lux-garden-dinner.jpg" alt="Luxury garden dinner with candlelit tables" loading="lazy" /></div>
         <div class="svc-panel__body">
           <div>
-            <span class="svc-panel__n">02</span>
+            <span class="svc-panel__n" aria-hidden="true">02</span>
             <h3>Luxury Private Event Planning</h3>
             <p class="svc-panel__desc">Full-service planning, design, and production for private celebrations of every size, where every detail matters.</p>
             <div class="svc-card__ideal"><div class="svc-card__ideal-label">Ideal For</div><p>Private hosts, families, executives, and boards planning dinner parties, milestone celebrations, galas, and holiday gatherings who want an elevated, seamless experience.</p></div>
@@ -504,7 +508,7 @@
         <div class="svc-panel__img"><img src="assets/images/web/lux-farmhouse-exterior.jpg" alt="Farmhouse restaurant private event entrance" loading="lazy" /></div>
         <div class="svc-panel__body">
           <div>
-            <span class="svc-panel__n">03</span>
+            <span class="svc-panel__n" aria-hidden="true">03</span>
             <h3>Venue &amp; Hospitality Consulting</h3>
             <p class="svc-panel__desc">Helping restaurants, hotels, resorts, wineries, private clubs, and event venues build stronger event businesses and increase revenue.</p>
             <div class="svc-card__ideal"><div class="svc-card__ideal-label">Ideal For</div><p>Restaurants, hotels, resorts, and venues ready to build or rebuild a high-performing events department and create consistent, sustainable bookings year over year.</p></div>
@@ -519,7 +523,7 @@
         <div class="svc-panel__img"><img src="assets/images/web/lux-farmhouse-grazing.jpg" alt="Signature grazing display created for Farmhouse" loading="lazy" /></div>
         <div class="svc-panel__body">
           <div>
-            <span class="svc-panel__n">04</span>
+            <span class="svc-panel__n" aria-hidden="true">04</span>
             <h3>Sales, Marketing &amp; Brand Strategy</h3>
             <p class="svc-panel__desc">Sales kits, marketing, brand strategy, and brand activations that help venues and hospitality brands win clients, fill event spaces, and pitch their value to corporate buyers with confidence.</p>
             <div class="svc-card__ideal"><div class="svc-card__ideal-label">Ideal For</div><p>Venues, restaurants, and food, beverage, and lifestyle brands that need a polished brand, sharper sales tools, and a clear plan to win corporate clients and activations.</p></div>
@@ -547,7 +551,7 @@
         <div class="svc-panel__img"><img src="assets/images/web/lux-mayfair-centerpiece.jpg" alt="Centerpiece at The Mayfair Hotel" loading="lazy" /></div>
         <div class="svc-panel__body">
           <div>
-            <span class="svc-panel__n">05</span>
+            <span class="svc-panel__n" aria-hidden="true">05</span>
             <h3>Fractional Revenue &amp; Business Development Leadership</h3>
             <p class="svc-panel__desc">Executive-level sales and business development leadership without the cost of a full-time executive.</p>
             <div class="svc-card__ideal"><div class="svc-card__ideal-label">Ideal For</div><p>Organizations preparing for growth, entering new markets, rebuilding sales teams, or seeking experienced leadership during periods of transition.</p></div>
@@ -562,7 +566,7 @@
         <div class="svc-panel__img"><img src="assets/images/web/lux-brand-stage-seating.jpg" alt="Brand stage and theater seating set for a live conversation event" loading="lazy" style="object-position:center 58%" /></div>
         <div class="svc-panel__body">
           <div>
-            <span class="svc-panel__n">06</span>
+            <span class="svc-panel__n" aria-hidden="true">06</span>
             <h3>Event Rescue &amp; Last-Minute Planning</h3>
             <p class="svc-panel__desc">Senior-level support when an event is close and not coming together, or when you need an experienced planner on short notice.</p>
             <div class="svc-card__ideal"><div class="svc-card__ideal-label">Ideal For</div><p>Corporate teams, nonprofits, and private hosts with an event within 30 days that needs an expert to step in, stabilize the plan, and deliver it.</p></div>
@@ -617,7 +621,7 @@
 ══════════════════════════════════════════════ -->
 <section class="who-we-serve">
   <div class="who-we-serve__inner">
-    <span class="eyebrow" style="color:var(--gold); margin-bottom:var(--s3); display:block;">Who We Serve</span>
+    <span class="eyebrow" style="margin-bottom:var(--s3); display:block;">Who We Serve</span>
     <h2 class="split">The Clients We <em>Partner With</em></h2>
     <div class="who-grid">
       <div class="who-item">Corporate Meeting Planners</div>
@@ -983,6 +987,8 @@
   <img src="" alt="" />
 </dialog>
 
+</main>
+
 <!-- ══════════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════════ -->
@@ -994,7 +1000,7 @@
         <p>Corporate event strategy, DMC services, luxury event planning, and venue consulting. Serving clients nationally and internationally.</p>
       </div>
       <div class="footer__col">
-        <h6>Navigation</h6>
+        <h2 class="footer__heading">Navigation</h2>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -1006,7 +1012,7 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h6>Services</h6>
+        <h2 class="footer__heading">Services</h2>
         <ul>
           <li><a href="#services">Corporate Events &amp; DMC Services</a></li>
           <li><a href="#luxury">Luxury Private Events</a></li>
@@ -1017,7 +1023,7 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h6>Connect</h6>
+        <h2 class="footer__heading">Connect</h2>
         <ul>
           <li><a href="https://calendly.com/jennifer-gseventsco/30min" target="_blank">Schedule a Strategy Call</a></li>
           <li><a href="event-rescue.html#request">Request Event Rescue Support</a></li>
@@ -1091,7 +1097,7 @@
   function openTab(key, scroll) {
     tabs.forEach(function (b) {
       var on = b.getAttribute('data-key') === key;
-      b.classList.toggle('is-active', on); b.setAttribute('aria-selected', on);
+      b.classList.toggle('is-active', on); b.setAttribute('aria-selected', on); b.setAttribute('tabindex', on ? '0' : '-1');
       var panel = document.getElementById('panel-' + b.getAttribute('data-key'));
       if (panel) panel.classList.toggle('is-active', on);
     });
@@ -1099,7 +1105,18 @@
     if (panel) panel.querySelectorAll('.svc-card__list li').forEach(function (li, i) { li.style.animationDelay = (i * 45 + 200) + 'ms'; });
     if (scroll) { var t = document.getElementById('services'); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 100, behavior: reduce ? 'auto' : 'smooth' }); }
   }
-  tabs.forEach(function (b) { b.addEventListener('click', function () { openTab(b.getAttribute('data-key')); }); });
+  tabs.forEach(function (b, i) {
+    b.addEventListener('click', function () { openTab(b.getAttribute('data-key')); });
+    b.addEventListener('keydown', function (e) {
+      var k = e.key, n = tabs.length, j = -1;
+      if (k === 'ArrowDown' || k === 'ArrowRight') j = (i + 1) % n;
+      else if (k === 'ArrowUp' || k === 'ArrowLeft') j = (i - 1 + n) % n;
+      else if (k === 'Home') j = 0; else if (k === 'End') j = n - 1;
+      if (j < 0) return;
+      e.preventDefault(); tabs[j].focus(); openTab(tabs[j].getAttribute('data-key'));
+    });
+  });
+  document.querySelectorAll('.svc-panel').forEach(function (p) { p.setAttribute('tabindex', '0'); });
   document.querySelectorAll('[data-tab]').forEach(function (a) {
     a.addEventListener('click', function (e) { e.preventDefault(); e.stopImmediatePropagation(); openTab(a.getAttribute('data-tab'), true); });
   });
@@ -1111,12 +1128,17 @@
   });
 
   /* Hero slideshow */
-  var slides = document.querySelectorAll('.hero-lux__slides img'), si = 0;
-  if (slides.length > 1 && !reduce) {
-    setInterval(function () {
-      slides[si].classList.remove('is-on'); si = (si + 1) % slides.length; slides[si].classList.add('is-on');
-    }, 6000);
-  }
+  var slides = document.querySelectorAll('.hero-lux__slides img'), si = 0, timer = null;
+  var hero = document.querySelector('.hero-lux'), pauseBtn = document.querySelector('.hero-lux__pause');
+  function play() { timer = setInterval(function () { slides[si].classList.remove('is-on'); si = (si + 1) % slides.length; slides[si].classList.add('is-on'); }, 6000); }
+  if (slides.length > 1 && !reduce) { play(); } else if (pauseBtn) { pauseBtn.hidden = true; }
+  if (pauseBtn) pauseBtn.addEventListener('click', function () {
+    var paused = pauseBtn.getAttribute('aria-pressed') === 'true';
+    if (paused) { play(); } else { clearInterval(timer); }
+    pauseBtn.setAttribute('aria-pressed', String(!paused));
+    pauseBtn.querySelector('span').textContent = paused ? 'Pause slideshow' : 'Play slideshow';
+    hero.classList.toggle('is-paused', !paused);
+  });
 
   if (reduce) return;
 

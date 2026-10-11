@@ -25,6 +25,23 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/site.css" />
   <link rel="stylesheet" href="css/pages.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Gold Standard Events Consultancy",
+  "url": "https://gseventsco.com/contact.html",
+  "about": {
+    "@type": "ProfessionalService",
+    "name": "Gold Standard Events Consultancy",
+    "url": "https://gseventsco.com/",
+    "email": "jennifer@gseventsco.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/jenniferejones26"
+    ]
+  }
+}
+  </script>
 </head>
 <body>
 
@@ -44,13 +61,13 @@
       <a href="contact.html" class="nav__link" aria-current="page">Contact</a>
     </div>
     <a href="https://calendly.com/jennifer-gseventsco/30min" target="_blank" rel="noopener" class="nav__cta">Book a Consultation</a>
-    <button class="nav__toggle" aria-label="Open menu" id="menu-toggle">
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" id="menu-toggle">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<div class="nav-overlay" id="nav-overlay">
+<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site menu">
   <button class="nav-overlay__close" id="menu-close" aria-label="Close menu">&#10005;</button>
   <a href="index.html" class="nav-overlay__link">Home</a>
   <a href="index.html#about" class="nav-overlay__link">About</a>
@@ -69,10 +86,11 @@
 
 <section class="hero-lux hero-lux--page">
   <div class="hero-lux__slides">
-    <img src="assets/images/web/lux-sunset-dinner.jpg" alt="Sunset dinner on a resort terrace" class="is-on" />
+    <img src="assets/images/web/lux-sunset-dinner.jpg" alt="Sunset dinner on a resort terrace" class="is-on" fetchpriority="high" />
     <img src="assets/images/web/lux-oceanview-terrace.jpg" alt="Oceanview terrace event set for dinner" loading="lazy" />
   </div>
   <div class="hero-lux__shade"></div>
+  <button type="button" class="hero-lux__pause" aria-pressed="false"><i aria-hidden="true"></i><span>Pause slideshow</span></button>
   <div class="hero-lux__content">
     <span class="hero-lux__eyebrow">Get In Touch</span>
     <h1 class="hero-lux__title">
@@ -205,7 +223,7 @@
         <p>Corporate event strategy, DMC services, luxury event planning, and venue consulting. Serving clients nationally and internationally.</p>
       </div>
       <div class="footer__col">
-        <h6>Navigation</h6>
+        <h2 class="footer__heading">Navigation</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#about">About</a></li>
@@ -217,7 +235,7 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h6>Services</h6>
+        <h2 class="footer__heading">Services</h2>
         <ul>
           <li><a href="index.html#services">Corporate Events &amp; DMC Services</a></li>
           <li><a href="index.html#luxury">Luxury Private Events</a></li>
@@ -228,7 +246,7 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h6>Connect</h6>
+        <h2 class="footer__heading">Connect</h2>
         <ul>
           <li><a href="https://calendly.com/jennifer-gseventsco/30min" target="_blank" rel="noopener">Schedule a Strategy Call</a></li>
           <li><a href="event-rescue.html#request">Request Event Rescue Support</a></li>

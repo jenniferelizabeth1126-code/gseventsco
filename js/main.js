@@ -29,18 +29,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.nav-overlay__close');
   const overlayLinks = document.querySelectorAll('.nav-overlay__link');
 
-  toggle?.addEventListener('click', () => {
+  function openMenu() {
     overlay?.classList.add('open');
     document.body.style.overflow = 'hidden';
-  });
-
-  function closeMenu() {
-    overlay?.classList.remove('open');
-    document.body.style.overflow = '';
+    toggle?.setAttribute('aria-expanded', 'true');
+    (closeBtn || overlayLinks[0])?.focus();
   }
 
-  closeBtn?.addEventListener('click', closeMenu);
-  overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
+  function closeMenu(returnFocus) {
+    if (!overlay?.classList.contains('open')) return;
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    toggle?.setAttribute('aria-expanded', 'false');
+    if (returnFocus) toggle?.focus();
+  }
+
+  toggle?.addEventListener('click', openMenu);
+  closeBtn?.addEventListener('click', () => closeMenu(true));
+  overlayLinks.forEach(link => link.addEventListener('click', () => closeMenu(false)));
+
+  /* Keyboard: Escape closes the menu, Tab stays inside it while open */
+  document.addEventListener('keydown', (e) => {
+    if (!overlay?.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeMenu(true); return; }
+    if (e.key === 'Tab') {
+      const items = [closeBtn, ...overlayLinks].filter(Boolean);
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
 
   /* ------- Scroll Animations ------- */
   const animatedEls = document.querySelectorAll('.fade-up, .fade-in');

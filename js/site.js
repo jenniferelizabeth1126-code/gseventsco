@@ -14,14 +14,23 @@
   });
 
   /* Hero slideshow */
-  var slides = document.querySelectorAll('.hero-lux__slides img'), si = 0;
-  if (slides.length > 1 && !reduce) {
-    setInterval(function () {
+  var slides = document.querySelectorAll('.hero-lux__slides img'), si = 0, timer = null;
+  var hero = document.querySelector('.hero-lux'), pauseBtn = document.querySelector('.hero-lux__pause');
+  function play() {
+    timer = setInterval(function () {
       slides[si].classList.remove('is-on');
       si = (si + 1) % slides.length;
       slides[si].classList.add('is-on');
     }, 6000);
   }
+  if (slides.length > 1 && !reduce) { play(); } else if (pauseBtn) { pauseBtn.hidden = true; }
+  if (pauseBtn) pauseBtn.addEventListener('click', function () {
+    var paused = pauseBtn.getAttribute('aria-pressed') === 'true';
+    if (paused) { play(); } else { clearInterval(timer); }
+    pauseBtn.setAttribute('aria-pressed', String(!paused));
+    pauseBtn.querySelector('span').textContent = paused ? 'Pause slideshow' : 'Play slideshow';
+    hero.classList.toggle('is-paused', !paused);
+  });
 
   /* FAQ: one answer open at a time */
   document.querySelectorAll('.qa details').forEach(function (d) {
