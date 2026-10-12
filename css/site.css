@@ -1700,3 +1700,61 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
   .contact-v2__meta dd { margin-bottom: 0.8rem; }
 }
 .contact-v2__meta dd, .contact-v2__detail a { min-width: 0; overflow-wrap: anywhere; }
+
+/* ══ v8: simplified home page ══ */
+.every__inner { grid-template-columns: 1fr; max-width: 1100px; }
+.every__copy { text-align: center; }
+.every__copy .rule { margin-left: auto; margin-right: auto; }
+.every__copy p { margin-left: auto; margin-right: auto; }
+.every__ways { grid-template-columns: repeat(4, minmax(0, 1fr)); text-align: left; }
+.every__ways div, .every__ways div + div, .every__ways div:nth-child(even) { padding: 1.2rem 1.2rem 1.2rem 0; border-left: 0; border-bottom: 0; }
+.every__ways div + div { padding-left: 1.2rem; border-left: 1px solid var(--border); }
+.every__actions { justify-content: center; }
+
+.about-v2--short { padding: var(--s7) 0; }
+.about-v2--short .about-v2__grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(2.5rem, 6vw, 5.5rem); }
+.about-v2--short h2 { font-family: var(--serif); font-size: clamp(2.2rem, 4.2vw, 3.4rem); line-height: 1.1; color: var(--navy); margin: 0.5rem 0 0; text-wrap: balance; }
+.about-v2--short .about-v2__bio p { font-size: 1.12rem; line-height: 1.8; max-width: 60ch; }
+
+.work { background: var(--cream); padding: var(--s7) 0; }
+.work__inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--s4); }
+.work__head { text-align: center; max-width: 760px; margin: 0 auto var(--s5); }
+.work__head h2 { font-family: var(--serif); font-size: clamp(2.2rem, 4.2vw, 3.4rem); line-height: 1.1; color: var(--navy); margin: 0.5rem 0 0; text-wrap: balance; }
+.work__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s2); }
+.work__item { margin: 0; position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--navy); }
+.work__item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+.work__item:hover img { transform: scale(1.05); }
+.work__item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.4rem 1rem 0.9rem; background: linear-gradient(to top, rgba(14,22,33,0.85), rgba(14,22,33,0)); color: #fff; font-family: var(--serif); font-size: 1.08rem; line-height: 1.25; }
+@media (max-width: 900px) {
+  .every__ways { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .every__ways div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .about-v2--short .about-v2__grid { grid-template-columns: 1fr; }
+  .work__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .every__ways { grid-template-columns: 1fr; }
+  .every__ways div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--border); }
+  .every__copy { text-align: left; }
+  .every__actions { justify-content: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) { .work__item img { transition: none; } }
+
+/* ══ v8: larger, easier-to-read type ══ */
+html { font-size: 18px; }
+.eyebrow, .side__label, .svc-card__label, .svc-card__ideal-label, .svc-tabs__n, .footer__col h2.footer__heading, .expect__label, .request__label, .tier__window { font-size: 14px !important; letter-spacing: 0.14em; }
+.hero-lux__eyebrow { font-size: 15px; letter-spacing: 0.18em; }
+.nav__link, .nav__cta { font-size: 14px; letter-spacing: 0.1em; }
+.btn, .btn--hero-gold, .btn--hero-outline, .hero-lux__ghost, .side__link, .about-v2__resume-link, .rescue-strip__link, .svc-panel__link { font-size: 15px !important; letter-spacing: 0.12em; }
+.hero-lux__path-d, .testi-card__role, .form-group label, .contact-v2__fine, .footer__social a { font-size: 16px !important; }
+.lux__badge, .hero-lux__mark { font-size: 14px; }
+.side__list li, .lux__list li { font-size: 1.05rem; }
+.every__ways span, .work__item figcaption { font-size: 1.05rem; }
+.work__item figcaption { font-size: 1.15rem; }
+@media (min-width: 1025px) and (max-width: 1380px) {
+  .nav__links { gap: clamp(0.9rem, 1.8vw, 1.8rem); }
+  .nav__link, .nav__cta { font-size: 13px; letter-spacing: 0.06em; }
+}
+.nav__cta { font-size: 13.5px !important; padding: 0.6rem 1.1rem; white-space: nowrap; }
+@media (min-width: 1025px) and (max-width: 1240px) { .nav__cta { display: none; } }
+.contact-v2__inner > * { min-width: 0; } .contact-v2__meta dd a { overflow-wrap: anywhere; }
+.rescue-strip__opts span, .rescue-strip p { font-size: 1.05rem; } .svc-card__list li { font-size: 1.05rem; }
