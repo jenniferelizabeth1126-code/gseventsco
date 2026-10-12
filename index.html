@@ -630,11 +630,11 @@
       <div class="footer__col">
         <h2 class="footer__heading">Services</h2>
         <ul>
-          <li><a href="#services">Corporate Events &amp; DMC Services</a></li>
+          <li><a href="#service-corporate" data-tab="corporate">Corporate Events &amp; DMC Services</a></li>
           <li><a href="#luxury">Luxury Private Events</a></li>
-          <li><a href="#services">Venue &amp; Hospitality Consulting</a></li>
-          <li><a href="#services">Sales, Marketing &amp; Brand Strategy</a></li>
-          <li><a href="#services">Fractional Revenue Leadership</a></li>
+          <li><a href="#service-venue" data-tab="venue">Venue &amp; Hospitality Consulting</a></li>
+          <li><a href="#service-brand" data-tab="brand">Sales, Marketing &amp; Brand Strategy</a></li>
+          <li><a href="#service-fractional" data-tab="fractional">Fractional Revenue Leadership</a></li>
           <li><a href="#event-rescue">Event Rescue &amp; Last-Minute Planning</a></li>
         </ul>
       </div>
@@ -736,7 +736,16 @@
   document.querySelectorAll('[data-tab]').forEach(function (a) {
     a.addEventListener('click', function (e) { e.preventDefault(); e.stopImmediatePropagation(); openTab(a.getAttribute('data-tab'), true); });
   });
-  openTab(location.hash === '#consulting' ? 'venue' : 'corporate');
+  function tabFromHash() {
+    var h = location.hash.replace('#', '');
+    if (h === 'consulting') return 'venue';
+    if (h.indexOf('service-') === 0 && document.getElementById('panel-' + h.slice(8))) return h.slice(8);
+    return null;
+  }
+  var startKey = tabFromHash();
+  openTab(startKey || 'corporate');
+  if (startKey) window.addEventListener('load', function () { setTimeout(function () { openTab(startKey, true); }, 60); });
+  window.addEventListener('hashchange', function () { var k = tabFromHash(); if (k) openTab(k, true); });
 
   /* Buttons that preselect the contact form */
   document.querySelectorAll('[data-service]').forEach(function (a) {
